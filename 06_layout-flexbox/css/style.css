@@ -71,6 +71,14 @@ html {
 
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 630px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+.nav-item {
+  margin-top: 5px;
 }
 
 .nav-item:not(:last-child) {
@@ -151,7 +159,7 @@ margin-bottom: 23px;
 }
 .section-servises-card {
   max-width: 573px;
-  height: 330px;
+  min-height: 330px;
   margin-bottom: 23px;
 }
 
@@ -163,7 +171,6 @@ margin-bottom: 23px;
   width: 402px;
   margin: 26px 126px 50px 45px;
 }
-
 
 /* Преимущества */
 
