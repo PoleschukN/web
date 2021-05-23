@@ -185,6 +185,7 @@ html {
   background-repeat: no-repeat;
   background-color: transparent;
   background-size: cover;
+  overflow: hidden;
   border-radius: 15px;
   }
 
@@ -300,16 +301,12 @@ html {
   min-height: 330px;
   margin-bottom: 23px;
   background-color: #fff;
-  border-radius: 15px;
 }
 
 .section-servises-card:not(:nth-child(2n)) {
   margin-right: 23px;
 }
 
-.servises-img {
-  border-radius: 15px 15px 0 0;
-}
 
 .section-servises-content {
   margin: 26px 126px 50px 45px;
@@ -378,7 +375,6 @@ html {
   flex: 1 1 25%;
   margin-bottom: 23px;
   background-color: #fff;
-  border-radius: 15px;
 }
 
 .section-advantages-card:not(:nth-child(4n)) {
@@ -414,16 +410,13 @@ html {
   flex: 1 1 33.33%;
   margin-bottom: 23px;
   background-color: #fff;
-  border-radius: 15px;
  }
 
 .section-allocation-card:not(:nth-child(3n)) {
   margin-right: 23px;
 }
 
-.allocation-img {
-  border-radius: 15px 15px 0 0;
-}
+
 .section-allocation-content {
   margin: 36px auto 41px 45px;
 }
