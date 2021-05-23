@@ -1,0 +1,255 @@
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Header */
+.header-container {
+  margin-top: 30px;
+  align-items: center;
+}
+
+.header-head {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.head-left {
+  display: flex;
+  align-items: stretch;
+}
+
+.logo {
+  margin-right: 40px;
+}
+
+.phone {
+  align-items: stretch;
+}
+
+.head-right {
+  margin-left: auto;
+}
+
+.header-nav {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav {
+  height: 70px;
+  padding-right: 45px;
+  padding-left: 45px;
+  white-space: nowrap;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 630px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+.nav-item {
+  margin-top: 5px;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.btns {
+  margin-left: auto;
+}
+.btn {
+  color: #CC9933;
+  font-size: 16px;
+  background: transparent;
+  padding: 13px 20px;
+  border: 1px solid #cc9933;
+  border-radius: 10px;
+}
+
+.btn:not(:last-child){
+  margin-right: 40px;
+}
+
+/* Спецпредложения */
+.section-offers-container {
+  margin-top: 50px;
+}
+
+.section-offers-column {
+  display: flex;
+  flex-grow: 1;
+ }
+
+.section-title {
+ margin-left: 40px;
+}
+
+.column {
+  width: 573px;
+}
+
+.column:not(:last-child) {
+margin-right: 23px;
+margin-bottom: 23px;
+}
+
+.section-offers-card:not(:last-child) {
+margin-bottom: 23px;
+}
+
+.section-offers-content {
+  width: 299px;
+  height: 178px;
+}
+.section-offers-price {
+  margin-top: 15px;
+  margin-bottom: 47px;
+}
+
+/* О нас */
+
+.section-aboutus-container {
+  margin-top: 69px;
+}
+.section-aboutus-content {
+  width: 888px;
+}
+
+/* Услуги */
+
+.section-servises-container {
+  margin-top: 50px;
+}
+
+.section-servises-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.section-servises-card {
+  max-width: 573px;
+  min-height: 330px;
+  margin-bottom: 23px;
+}
+
+.section-servises-card:not(:nth-child(2n)) {
+  margin-right: 23px;
+}
+
+.section-servises-content {
+  width: 402px;
+  margin: 26px 126px 50px 45px;
+}
+
+/* Преимущества */
+
+.section-advantages-container {
+  margin-top: 50px;
+}
+
+.section-advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.section-advantages-card {
+  max-width: 275px;
+  flex: 1 1 25%;
+  margin-bottom: 23px;
+}
+
+.section-advantages-card:not(:nth-child(2n)) {
+  margin-right: 23px;
+}
+
+.section-advantages-img {
+  width: 64px;
+  height: 66px;
+  margin-top: 40px;
+  margin-left: 45px;
+}
+
+.description-advantages {
+  margin-top: 10px;
+  margin: 10px 42px 41px 45px;
+  width: 188px;
+  height: 118px;
+}
+
+/* Размещение */
+.section-allocation-container {
+  margin-top: 50px;
+}
+
+.section-allocation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: stretch;
+}
+ .section-allocation-card {
+  max-width: 374px;
+  flex: 1 1 33.33%;
+  margin-bottom: 23px;
+ }
+
+.section-allocation-card:not(:nth-child(3n)) {
+  margin-right: 23px;
+}
+
+.section-allocation-content {
+  margin: 36px auto 41px 45px;
+}
+
+.price-and-raiting {
+  display: flex;
+  max-height: 16px;
+  margin-top: 36px;
+  justify-content: space-between;
+}
+
+.section-allocation-raiting {
+  margin-right: 46px;
+  max-height: 14px;
+}
+
+.section-allocation-namehotel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.section-allocation-btn-numbers {
+  margin-top: 20px;
+}
