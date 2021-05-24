@@ -141,6 +141,7 @@ html {
   margin-left: auto;
 }
 .btn {
+  display: inline-block;
   color: #CC9933;
   font-size: 16px;
   background: transparent;
