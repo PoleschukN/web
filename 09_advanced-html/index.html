@@ -428,7 +428,129 @@
         </ul>
       </div>
     </section>
+    <!-- Хочу тур -->
+    <section class="section-tour">
+      <div class="container section-tour-container">
+        <h2 class="section-title tour-title">Хочу тур</h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+          <fieldset class="tour">
+            <label class="section-tour-item item-city">Город вылета
+              <select name="City" class="form-select form-city form">
+                <option value="Moscow">Москва</option>
+                <option value="State Petersburg" selected>Санкт-Петербург</option>
+                <option value="Kazan">Казань</option>
+                <option value="Samara">Самара</option>
+              </select>
+            </label>
+            <label class="section-tour-item item-country">
+              Страна
+              <select name="Country" class="form-select form-country form">
+                <option value="Russia">Россия</option>
+                <option value="Turkey" selected>Турция</option>
+                <option value="Georgia">Грузия</option>
+                <option value="Australia" selected>Австралия</option>
+              </select>
+            </label>
+            <label class="section-tour-item item">
+              Дата прибытия
+              <input type="date" name="date" value="2021-10-18" min="2020-10-18" max="2022-10-18" class="form">
+            </label>
+            <label class="section-tour-item item">
+              Ночей
+              <input type="number" name="Nights" placeholder="6" min="1" class="form form-number">
+            </label>
+            <label class="section-tour-item item">
+              Туристы
+              <input type="number" required name="tourists" placeholder="2" min="1" class="form form-number">
+            </label>
+            <button type="submit" class="btn submit-btn">
+              Найти
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <!-- контакты -->
+    <section class="section-contacts">
+      <div class="container section-contacts-container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="section-contacts-content">
+          <div class="section-contacts-content-left">
+            <ul>
+              <li class="section-contacts-content-points point-adress">
+                <div class="name-table">Адрес</div>
+                <div class="content-table">Москва, улица Юности, дом 5, строение 4, офис 2</div>
+              </li>
+              <li class="section-contacts-content-points">
+                <div class="name-table">Телефоны</div>
+                <div class="content-table">
+                  <a href="tel:+7 (499) 535-64-34" class="yellow-text">+7 (499) 535-64-34</a>
+                  <a href="tel:+7 (495) 005-05-44" class="yellow-text">+7 (495) 005-05-44</a>
+                </div>
+              </li>
+              <li class="section-contacts-content-points points-email">
+                <div class="name-table">Email</div>
+                <div class="content-table">
+                  <div class="content-table-text">
+                    <a href="mailto:lg.oona@mail.ru" class="yellow-text">lg.oona@mail.ru</a>
+                    по вопросам бронирования
+                  </div>
+                  <div class="content-table-text">
+                    <a href="mailto:hotels.ln@mail.ru" class="yellow-text">hotels.ln@mail.ru</a> по вопросам
+                    сотрудничества
+                  </div>
+                </div>
+              </li>
+              <li class="section-contacts-content-points">
+                <div class="name-table">График</div>
+                <div class="content-table">Понедельник - пятница с 10:00 до 19:00</div>
+              </li>
+            </ul>
+            <button class="btn route">Построить маршрут</button>
+          </div>
+          <div class="section-contacts-content-right">
+            <img src="/img/Layer.jpg" alt="" class="section-contacts-content-img">
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
+  <footer class="container foot">
+    <ul class="foot-list">
+      <li class="foot-list-info">
+        <small class="copyright">
+          © 2012-2020 Управляющая компания Объединенной сети «Лагуна Хотелс»
+        </small>
+        <p class="foot-content">
+          Представленная на сайте информация
+          носит справочный характер <br>
+          и не является публичной офертой
+        </p>
+        <a class="agreement" href="#">Пользовательское соглашение</a>
+      </li>
+      <li class="foot-list-contacts">
+        <div class="foot-adress">
+          11710, улица Юности, дом 5 строение 4, офис 2
+        </div>
+        <div class="foot-contacts foot-phone">
+          <a href="tel:+74995356434" class="yellow-text">+7 (499) 535-64-34</a>
+          <a href="tel:+74950050544" class="yellow-text">+7 (495) 005-05-44</a>
+        </div>
+        <div class="foot-contacts foot-mail">
+          <a href="mailto:lg.oona@mail.ru" class="yellow-text">lg.oona@mail.ru</a>
+          <a href="mailto:hotels.ln@mail.ru" class="yellow-text">hotels.ln@mail.ru</a>
+        </div>
+      </li>
+      <li class="foot-list-social">
+        <a href="#" class="tripadvisor foot-social-symbol"></a>
+        <a href="#" class="twitter foot-social-symbol"></a>
+        <a href="#" class="facebook foot-social-symbol"></a>
+        <a href="#" class="social foot-social-symbol"></a>
+        <a href="#" class="instagram foot-social-symbol"></a>
+      </li>
+    </ul>
+  </footer>
 </body>
 
 </html>
