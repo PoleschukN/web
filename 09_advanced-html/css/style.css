@@ -636,6 +636,7 @@ html {
   /* футер */
 
 .foot {
+  display: flex;
   min-height: 341px;
   border-radius: 15px;
   margin-top: 22px;
@@ -646,11 +647,7 @@ html {
   background-position: 733px 110px;
 }
 
-.foot-list {
-  display: flex;
-}
-
-.foot-list-info {
+.foot-info {
   margin-top: 44px;
   margin-left: 52px;
   max-width: 300px;
@@ -673,42 +670,50 @@ html {
   color: #cc9933;
 }
 
-.foot-list-contacts {
+.foot-contacts {
+  display: flex;
+  flex-direction: column;
+  max-width: 358px;
   margin-top: 50px;
   margin-left: 122px;
+  line-height: 22px;
 }
 
 .foot-adress {
   color: #f6f6f6;
 }
 
-.foot-phone {
+.foot-phone-mail {
+  display: flex;
+  flex-direction: column;
   margin-top: 14px;
 }
 
-.foot-contacts {
+.foot-social {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 155px;
-  line-height: 25px;
-}
-
-.foot-mail {
-  margin-top: 15px;
-}
-
-.foot-list-social {
-  display: flex;
-  flex-direction: column;
   position: relative;
   left: 260px;
   top: 50px;
 }
+.foot-social-list {
+  display: flex;
+  flex-direction: column;
+}
 
-.foot-social-symbol {
+.foot-social-item {
+  width: 25px;
+  height: 25px;
+}
+
+.foot-social-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.foot-social-icon {
+  display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-bottom: 20px;
+  background-color: transparent;
   width: 25px;
   height: 25px;
 }
@@ -717,7 +722,7 @@ html {
   background-image: url(/img/tripadvisor.svg);
 }
 
-  .twitter {
+.twitter {
   background-image: url(/img/twitter.svg);
 }
 
@@ -728,6 +733,7 @@ html {
 .social {
   background-image: url(/img/social.svg);
 }
+
 .instagram {
   background-image: url(/img/instagram.svg);
 }
