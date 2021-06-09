@@ -638,13 +638,18 @@ html {
 .foot {
   display: flex;
   min-height: 341px;
+  border: 1px solid transparent;
   border-radius: 15px;
-  margin-top: 22px;
-  margin-bottom: 52px;
+  margin-top: 19px;
+  margin-bottom: 20px;
   background-color: #333333;
   background-image: url(/img/sunfooter.svg);
   background-repeat: no-repeat;
   background-position: 733px 110px;
+}
+
+.foot-left {
+  display: flex;
 }
 
 .foot-info {
@@ -689,15 +694,14 @@ html {
   margin-top: 14px;
 }
 
-.foot-social {
-  display: flex;
-  position: relative;
-  left: 260px;
-  top: 50px;
+.foot-right {
+  margin-left: auto;
 }
 .foot-social-list {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  margin-right: 51px;
 }
 
 .foot-social-item {
