@@ -638,14 +638,13 @@ html {
 .foot {
   display: flex;
   min-height: 341px;
-  border: 1px solid transparent;
   border-radius: 15px;
-  margin-top: 19px;
+  margin-top: 21px;
   margin-bottom: 20px;
   background-color: #333333;
   background-image: url(/img/sunfooter.svg);
   background-repeat: no-repeat;
-  background-position: 733px 110px;
+  background-position: 733px bottom;
 }
 
 .foot-left {
