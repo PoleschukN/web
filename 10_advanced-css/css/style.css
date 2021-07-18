@@ -227,12 +227,14 @@ html {
 }
 
 .maldives > *,
-.crete > * {
+.crete > *,
+.section-offers-luxary-card > * {
   position: relative;
 }
 
 .maldives::before,
-.crete::before {
+.crete::before,
+.section-offers-luxary-card::before {
   content: '';
   display: block;
   position: absolute;
@@ -295,6 +297,10 @@ html {
   width: 573px;
   min-height: 540px;
   background-image: url(../img/numbers.jpg);
+}
+
+.section-offers-luxary-card::before {
+  visibility: hidden;
 }
 
 .section-offers-luxary-card-content {
