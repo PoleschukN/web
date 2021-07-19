@@ -226,15 +226,11 @@ html {
   background-image: url(../img/creet.jpg);
 }
 
-.maldives > *,
-.crete > *,
-.section-offers-luxary-card > * {
+.section-offers .card > * {
   position: relative;
 }
 
-.maldives::before,
-.crete::before,
-.section-offers-luxary-card::before {
+.section-offers .card::before {
   content: '';
   display: block;
   position: absolute;
