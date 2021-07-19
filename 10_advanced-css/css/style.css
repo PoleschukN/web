@@ -299,6 +299,11 @@ html {
   background-image: url(../img/numbers.jpg);
 }
 
+.section-offers-luxary-card::before {
+  transform: rotate(-90deg);
+  height: 101%;
+}
+
 .section-offers-luxary-card-content {
   margin-left: 40px;
   margin-bottom: 41px;
