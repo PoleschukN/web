@@ -295,7 +295,7 @@ html {
   background-image: url(../img/numbers.jpg);
 }
 
-.section-offers-luxary-card::before {
+.section-offers .card.section-offers-luxary-card::before {
   transform: rotate(-90deg);
   height: 101%;
 }
