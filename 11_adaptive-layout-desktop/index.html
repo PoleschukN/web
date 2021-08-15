@@ -66,7 +66,7 @@
     <!-- о нас -->
     <section class="section-aboutus">
       <div class="container section-aboutus__container">
-        <h2 class="section-title">О нас</h2>
+        <h2 class="section-title aboutus-title">О нас</h2>
         <p class="section-aboutus__description">
           Также как перспективное планирование создаёт необходимость
           включения в производственный план целого ряда внеочередных
@@ -131,16 +131,16 @@
         <h2 class="section-title">Как мы работаем</h2>
         <ul class="section-howwework__list">
           <li class="section-howwework__step">
-            <a href="#" class="section-howwework__step__link">1 шаг</a>
+            <a href="#" class="section-howwework__step__link link">1 шаг</a>
           </li>
           <li class="section-howwework__step">
-            <a href="#" class="section-howwework__step__link">2 шаг</a>
+            <a href="#" class="section-howwework__step__link link">2 шаг</a>
           </li>
           <li class="section-howwework__step">
-            <a href="#" class="section-howwework__step__link">3 шаг</a>
+            <a href="#" class="section-howwework__step__link link">3 шаг</a>
           </li>
           <li class="section-howwework__step">
-            <a href="#" class="section-howwework__step__link">4 шаг</a>
+            <a href="#" class="section-howwework__step__link link">4 шаг</a>
           </li>
         </ul>
         <div class="section-howwework__content">
@@ -192,7 +192,7 @@
           </li>
           <li class="section-questions__item">
             <h3 class="question">
-              У меня есть свой проект. Сможем ли мы его доработать /реализовать?
+              У меня есть свой проект. Сможем ли мы его доработать / реализовать?
             </h3>
             <a href="#" class="question__link">
               <img src="img/х.svg" alt="" class="question__link__img">
@@ -208,7 +208,7 @@
           </li>
           <li class="section-questions__item">
             <h3 class="question">
-              Могу ли я делегировать вам работу/согласование с подрядчиком/ организацией?
+              Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
             </h3>
             <a href="#" class="question__link">
               <img src="img/х.svg" alt="" class="question__link__img">
@@ -236,37 +236,37 @@
           </a>
           <ul class="footer__list">
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 О нас
               </a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 Проекты
               </a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 Отзывы
               </a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 Договор оферты
               </a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 Договор подряда
               </a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 Конфиденциальность
               </a>
             </li>
             <li class="footer_item">
-              <a href="#" class="footer__item__link">
+              <a href="#" class="footer__item__link link">
                 Партнерское соглашение
               </a>
             </li>
@@ -293,14 +293,16 @@
           <form action="https://jsonplaceholder.typicode.com/posts" class="footer__form">
             <input type="text" name="name" placeholder="Фамилия, имя и отчество*" class="input footer__form__name">
             <input type="email" name="email" placeholder="E-mail" class="input footer__form__email">
-            <textarea name="massage" placeholder="Сообщение" class="input footer__form__massage">
-            </textarea>
+            <textarea name="massage" placeholder="Сообщение" class="input footer__form__massage"></textarea>
             <div class="footer__form__btn">
               <button type="submit" class="btn submit-btn">
                 Отправить данные
               </button>
-              <input type="checkbox" name="Soglasie" class="footer__soglasie">
-              <p class="footer__soglasie-text">Согласен на обработку данных</p>
+              <label for="checkbox" class="footer__checkbox">
+              <input type="checkbox" name="Soglasie" class="footer__checkbox__old" id="checkbox">
+              <span class="footer__checkbox__new"></span>
+              </label>
+              <p class="footer__checkbox-text">Согласен на обработку данных</p>
             </div>
 
           </form>
