@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('../fonts/MontserratExtraBold.woff2') format('woff2'),
-       url('../fonts/MontserratExtrsBold.woff') format('woff');
+       url('../fonts/MontserratExtraBold.woff') format('woff');
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -99,7 +99,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100px;
+  max-height: 101px;
 }
 
 .header__left {
@@ -115,43 +115,52 @@ html {
 .menu-nav {
   display: flex;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 37px;
   margin-bottom: 38px;
-  margin-right: 2px;
 }
 
 .menu-nav__list {
   display: inline-flex;
-  align-items: center;
-  margin-right: 86px;
+  align-items: stretch;
+  margin-right: 76px;
 }
 
-.menu-nav__item {
-  margin-top: 5px;
-}
 
 .menu-nav__item:not(:last-child) {
-  margin-right: 85px;
+  margin-right: 78px;
 }
 
 .menu-nav__link {
   color: var(--color-dark-grey);
   font-size: 18px;
   font-weight: 600;
+  border: 2px solid var(--color-white);
+  padding: 2px;
 }
 
 .menu-nav__link:hover {
-  box-shadow: 0 1px 0 0 var(--color-orange);
+ border-bottom: 2px solid var(--color-orange);
 }
 
 .menu-nav__link:focus {
   outline: none;
-  box-shadow: 0px 0px 0 1px var(--color-orange);
+  border: 2px solid var(--color-orange);
 }
 
 .menu-nav__link:active {
-  box-shadow: 0 1px 0 0 var(--color-orange);
-  color: var(--color-orange);
+  border-bottom: 2px solid var(--color-dark-orange);
+  color: var(--color-dark-orange);
+}
+.menu-nav__search {
+  display: inline-block;
+  height: 30px;
+  border: 2px solid var(--color-white);
+  padding: 2px 1px 1px 2px;
+}
+
+.header__search {
+  width: 30px;
+  height: 30px;
 }
 
 .menu-nav__search:hover svg rect,
@@ -165,30 +174,26 @@ html {
 }
 
 .menu-nav__search:focus {
-  outline: var(--color-orange) solid 1px;
-  outline-offset: 4px;
+  outline: none;
+  border: 2px solid var(--color-orange);
 }
 
 /* Проектные решения */
 
-.section-solution {
-  margin-top: -2px;
-}
-
 .section-solution__container {
-  min-height: 620px;
+  min-height: 619px;
   background-image: url(../img/hero1.jpg);
 }
 
 .section-solution__content {
   max-width: 837px;
   margin-left: 79px;
-  padding-top: 100px;
+  padding-top: 28px;
 }
 
 .section-solution__title {
-  margin: 0;
-  padding-top: 6px;
+  margin-top: 77px;
+  margin-bottom: 0;
   font-size: 70px;
   font-weight: 800;
   line-height: 85px;
@@ -204,12 +209,10 @@ html {
 }
 
 .section-solution__btn {
-  margin-top: 87px;
-  padding: 26px 35px;
+  margin-top: 88px;
+  padding: 19px 37px;
   font-size: 23.46px;
-  letter-spacing: .3px;
-  line-height: 28.6px;
-  border: 0;
+  line-height: 37.6px;
 }
 
 .section-solution__btn:hover,
@@ -272,7 +275,7 @@ html {
   margin-right: 33px;
   display: flex;
   align-items: flex-end;
-  min-height: 624px;
+  min-height: 622px;
   background-image: url(../img/aboutus.jpg);
   background-repeat: no-repeat;
 }
@@ -282,7 +285,7 @@ html {
   justify-content: space-between;
   padding: 0 50px;
   max-width: 868px;
-  height: 197px;
+  height: 195px;
   align-items: center;
   background-color: rgba(0, 0, 0, .5);
 }
@@ -357,7 +360,7 @@ html {
   margin: 23px 0 10px 0px;
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.27px;
 }
 
 .section-aboutus__card-description {
@@ -369,7 +372,7 @@ html {
 /* Как мы работаем */
 
 .section-howwework {
-  margin-top: 104px;
+  margin-top: 106px;
 }
 
 .section-howwework__list {
@@ -437,9 +440,9 @@ html {
 }
 
 .moredetails-btn {
-  padding: 21px 38px;
+  padding: 23px 36px;
   margin-right: 32px;
-  border: 0;
+  line-height: 14px;
 }
 
 .moredetails-btn:hover,
@@ -452,7 +455,7 @@ html {
 }
 
 .contract-btn {
-  padding: 19px 36px;
+  padding: 19px 37px;
   background: transparent;
   border: 1px solid var(--color-dark-grey);
   font-weight: 400;
@@ -492,7 +495,7 @@ html {
 /* Часто задаваемые вопросы */
 
 .section-questions {
-  margin-top: 106px;
+  margin-top: 104px;
 }
 
 .section-questions__list {
@@ -501,6 +504,7 @@ html {
 
 .section-questions__item {
   min-height: 111px;
+  padding: 17px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -608,7 +612,7 @@ html {
   background-color: #222;
   max-width: 1920px;
   min-height: 595px;
-  padding: 50px 74px 0 79px;
+  padding: 49px 74px 0 80px;
 }
 
 .footer__left {
@@ -764,8 +768,9 @@ html {
 .submit-btn {
   width: 268px;
   margin-left: 1px;
-  padding: 19px 50px;
-  margin-right: 21px;
+  padding: 19px 48px;
+  margin-right: 20px;
+  line-height: 16px;
 }
 
 .footer__checkbox {
@@ -781,8 +786,8 @@ html {
 .footer__checkbox__old + .footer__checkbox__new {
   position: absolute;
   width: 14px;
-  height: 15px;
-  top: -7px;
+  height: 14px;
+  top: -6px;
   left: 2px;
   border: 1px solid var(--color-light-grey);
 }
