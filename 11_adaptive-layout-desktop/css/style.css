@@ -122,20 +122,20 @@ html {
 .menu-nav__list {
   display: inline-flex;
   align-items: stretch;
-  margin-right: 76px;
+  margin-right: 78px;
 }
 
 
 .menu-nav__item:not(:last-child) {
-  margin-right: 78px;
+  margin-right: 84px;
 }
 
 .menu-nav__link {
   color: var(--color-dark-grey);
   font-size: 18px;
   font-weight: 600;
-  border: 2px solid var(--color-white);
-  padding: 2px;
+  border-bottom: 2px solid var(--color-white);
+  padding: 1px;
 }
 
 .menu-nav__link:hover {
@@ -143,14 +143,15 @@ html {
 }
 
 .menu-nav__link:focus {
-  outline: none;
-  border: 2px solid var(--color-orange);
+  outline: var(--color-orange) solid 2px;
+  outline-offset: 1px;
 }
 
 .menu-nav__link:active {
   border-bottom: 2px solid var(--color-dark-orange);
   color: var(--color-dark-orange);
 }
+
 .menu-nav__search {
   display: inline-block;
   height: 30px;
