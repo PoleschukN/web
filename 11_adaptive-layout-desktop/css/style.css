@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/MontserratExtra.woff2') format('woff2'),
-       url('../fonts/MontserratExtra.woff') format('woff');
+  src: url('../fonts/MontserratExtraBold.woff2') format('woff2'),
+       url('../fonts/MontserratExtraBold.woff') format('woff');
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -136,6 +136,7 @@ html {
   font-weight: 600;
   border-bottom: 2px solid var(--color-white);
   padding: 1px;
+  transition: border .3s ease-out;
 }
 
 .menu-nav__link:hover {
@@ -162,6 +163,14 @@ html {
 .header__search {
   width: 30px;
   height: 30px;
+}
+
+.menu-nav__search svg rect {
+  transition: fill .3s ease-out;
+}
+
+.menu-nav__search svg path {
+  transition: stroke .3s ease-out;
 }
 
 .menu-nav__search:hover svg rect,
