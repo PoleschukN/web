@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/MontserratExtraBold.woff2') format('woff2'),
-       url('../fonts/MontserratExtraBold.woff') format('woff');
+  src: url('../fonts/MontserratExtra.woff2') format('woff2'),
+       url('../fonts/MontserratExtra.woff') format('woff');
   font-weight: 800;
   font-display: swap;
   font-style: normal;
