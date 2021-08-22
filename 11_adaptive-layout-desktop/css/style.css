@@ -82,6 +82,7 @@ html {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  transition: background-color .5s ease-out, color .5s ease-out, border .5s ease-out;
 }
 
 .btn:focus {
@@ -163,10 +164,6 @@ html {
 .header__search {
   width: 30px;
   height: 30px;
-}
-
-.menu-nav__search svg rect {
-  transition: fill .3s ease-out;
 }
 
 .menu-nav__search svg path {
@@ -393,18 +390,28 @@ html {
 }
 
 .section-howwework__step {
-  padding-top: 2px;
+  padding-top: 1px;
 }
 
 .section-howwework__step:not(:last-child) {
-  margin-right: 86px;
+  margin-right: 85px;
 }
 
-.section-howwework__step__link {
+.section-howwework__step__btn {
   color: #000;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-.link:hover {
+.link,
+.section-howwework__step__btn  {
+  transition: color .3s ease-out;
+}
+
+.link:hover,
+.section-howwework__step__btn-active {
   color: var(--color-orange);
 }
 
@@ -466,7 +473,7 @@ html {
 
 .contract-btn {
   padding: 19px 37px;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid var(--color-dark-grey);
   font-weight: 400;
   color: var(--color-dark-grey);
@@ -520,6 +527,7 @@ html {
   justify-content: space-between;
   border-top: 1px solid var(--color-light-grey);
   position: relative;
+  transition: border .5s ease-out;
 }
 
 .section-questions__item:last-child {
@@ -529,6 +537,7 @@ html {
 .question {
   font-size: 24px;
   font-weight: 700;
+  transition: color .5s ease-out;
 }
 
 .section-questions__item:hover,
@@ -538,6 +547,13 @@ html {
 
 .section-questions__item:last-child:hover {
   border-bottom: 1px solid var(--color-orange);
+}
+
+.section-questions__item svg ellipse,
+.section-questions__item svg path,
+.menu-nav__search svg rect,
+.footer__social__icon svg path {
+  transition: fill .5s ease-out;
 }
 
 .section-questions__item:hover svg ellipse {
@@ -614,7 +630,7 @@ html {
 /* Футер */
 
 .footer {
-  margin-top: 99px;
+  margin-top: 100px;
 }
 
 .footer__container {
@@ -728,6 +744,7 @@ html {
   background-color: #414141;
   color: var(--color-light-grey);
   border: none;
+  transition: background-color .3s ease-out;
 }
 
 .input:not(:last-child) {
@@ -785,6 +802,7 @@ html {
 
 .footer__checkbox {
   position: relative;
+  margin-top: 4px;
   padding-left: 20px;
   cursor: pointer;
 }
@@ -797,7 +815,7 @@ html {
   position: absolute;
   width: 14px;
   height: 14px;
-  top: -6px;
+  top: 1px;
   left: 2px;
   border: 1px solid var(--color-light-grey);
 }
@@ -820,7 +838,7 @@ html {
 .footer__checkbox-text {
   font-size: 16px;
   font-weight: 400;
-  color: var(--color-white);
+  color: var(--color-light-grey);
   margin-top: 22px;
 }
 
