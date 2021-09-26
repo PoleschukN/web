@@ -1000,6 +1000,10 @@ html {
 @media (max-width: 768px) {
   .section-solution__container {
     background-image: url(/img/hero768.jpg);
+    background-repeat: no-repeat;
 }
 
+.section-aboutus__moredetails {
+  background-image: url(../img/aboutus768.jpg);
+}
 }
