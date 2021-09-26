@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewbort" content="width=device-width, initial-scale=1.0">
+  <meta name="viewbort" content="width=device-width, initial-scale=1">
   <title>Evklid</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -15,11 +15,19 @@
     <div class="container header__container">
       <div class="header__left">
         <a href="#" class="header__logo">
-          <img src="img/Logo.svg" alt="Евклид - проектные системы" class="logo-img">
+          <picture>
+            <source media="(max-width: 1024px)" srcset="img/menu.svg" class="header-menu">
+            <img src="img/Logo.svg" alt="Евклид - проектные системы" class="logo-img">
+          </picture>
         </a>
       </div>
       <div class="header__right">
         <nav class="menu-nav header__nav">
+          <div class="menu-nav__logo">
+            <a href="#" class="menu-nav__logo-link">
+              <img src="img/Logo.svg" alt="Евклид - проектные системы" class="menu-nav__logo-img">
+            </a>
+          </div>
           <ul class="menu-nav__list">
             <li class="menu-nav__item">
               <a href="#" class="menu-nav__link">О нас</a>
@@ -55,7 +63,7 @@
   </header>
   <main>
     <!-- Проектные решения -->
-    <section class="section-solution">
+    <section class="section section-solution">
       <div class="container section-solution__container">
         <div class="section-solution__content">
           <h3 class="section-solution__title">Проектные решения любой сложности</h3>
@@ -71,7 +79,7 @@
       </div>
     </section>
     <!-- о нас -->
-    <section class="section-aboutus">
+    <section class="section section-aboutus">
       <div class="container section-aboutus__container">
         <h2 class="section-title aboutus-title">О нас</h2>
         <p class="section-aboutus__description">
@@ -127,13 +135,15 @@
                   эксперимент проверки прогресса профессионального сообщества.
                 </p>
               </div>
+
+
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- как мы работаем -->
-    <section class="section-howwework">
+    <section class="section section-howwework">
       <div class="container section-howwework__container">
         <h2 class="section-title">Как мы работаем</h2>
         <ul class="section-howwework__list">
@@ -181,12 +191,18 @@
             </div>
           </div>
           <div class="section-howwework__img">
+            <picture>
+              <source media="(max-width: 320px)" srcset="/img/howwework1_320.jpg" class="section-howwework__img320">
+              <source media="(max-width: 768px)" srcset="/img/howwework1_768.jpg" class="section-howwework__img768">
+              <source media="(max-width: 1024px)" srcset="/img/howwework1_1024.jpg" class="section-howwework__img1024">
+              <img src="/img/howwework1.jpg" alt="Шаг 1" class="logo-img">
+            </picture>
           </div>
         </div>
       </div>
     </section>
     <!-- Часто задаваемые вопросы -->
-    <section class="section-questions">
+    <section class="section section-questions">
       <div class="container section-questions__container">
         <h2 class="section-title">Часто задаваемые вопросы</h2>
         <ul class="section-questions__list">
