@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewbort" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Evklid</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -74,8 +74,31 @@
             Заказать расчет
           </button>
         </div>
-        <!-- <div class="section-solution__begunok">
-        </div> -->
+        <div class="section-solution__begunok">
+          <ul class="section-solution__begunok-list">
+            <li class="begunok-step">
+              <a href="" class="begunok-step__img">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7.5" cy="7.5" r="7.5" fill="white" fill-opacity="0.4" />
+                </svg>
+              </a>
+            </li>
+            <li class="begunok-step">
+              <a href="" class="begunok-step__img">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7.5" cy="7.5" r="7.5" fill="white" fill-opacity="0.4" />
+                </svg>
+              </a>
+            </li>
+            <li class="begunok-step">
+              <a href="" class="begunok-step__img">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7.5" cy="7.5" r="7.5" fill="white" fill-opacity="0.4" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- о нас -->
@@ -118,7 +141,7 @@
                 <h3 class="section-aboutus__cardtitle">
                   Консультация с широким активом</h3>
                 <p class="section-aboutus__card-description">
-                  А также свежий взгляд на привычныiе вещи - безусловно
+                  А также свежий взгляд на привычные вещи - безусловно
                   открывает новые горизонты для как самодостаточных, так
                   и внешне зависимых концептуальных решений.
                 </p>
@@ -192,10 +215,10 @@
           </div>
           <div class="section-howwework__img">
             <picture>
-              <source media="(max-width: 320px)" srcset="/img/howwework1_320.jpg" class="section-howwework__img320">
-              <source media="(max-width: 768px)" srcset="/img/howwework1_768.jpg" class="section-howwework__img768">
-              <source media="(max-width: 1024px)" srcset="/img/howwework1_1024.jpg" class="section-howwework__img1024">
-              <img src="/img/howwework1.jpg" alt="Шаг 1" class="logo-img">
+              <source srcset="img/howwework320.jpg" media="(max-width: 320px)" class="section-howwework__img320">
+              <source srcset="img/howwework768.jpg" media="(max-width: 768px)" class="section-howwework__img768">
+              <source srcset="img/howwework1024.jpg" media="(max-width: 1024px)" class="section-howwework__img1024">
+              <img src="img/howwework.jpg" alt="Шаг 1" class="section-howwework__img-origin">
             </picture>
           </div>
         </div>
