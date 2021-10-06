@@ -120,7 +120,11 @@ html {
   margin-bottom: 38px;
 }
 
-.menu-nav__logo {
+.header__nav__menu {
+  display: none;
+}
+
+.menu-nav__logo1024 {
   display: none;
 }
 
@@ -158,16 +162,16 @@ html {
   color: var(--color-dark-orange);
 }
 
+.header__search {
+  width: 30px;
+  height: 30px;
+}
+
 .menu-nav__search {
   display: inline-block;
   height: 30px;
   border: 2px solid var(--color-white);
   padding: 2px 1px 1px 2px;
-}
-
-.header__search {
-  width: 30px;
-  height: 30px;
 }
 
 .menu-nav__search svg path {
@@ -190,10 +194,13 @@ html {
 /* Проектные решения */
 
 .section-solution__container {
+  display: flex;
   min-height: 619px;
   background-image: url(../img/hero1.jpg);
   background-repeat: no-repeat;
   padding: 37px 81px 0 81px;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .section-solution__content {
@@ -217,7 +224,7 @@ html {
 }
 
 .section-solution__btn {
-  margin-top: 86px;
+  margin-top: 88px;
   padding: 19px 35px;
   font-size: 23.46px;
   line-height: 37.6px;
@@ -233,13 +240,10 @@ html {
   border: 1px solid var(--color-dark-orange);
 }
 
-.section-solution__btn__link {
-  color: var(--color-white);
-}
-
 .section-solution__begunok {
   width: 100px;
   margin: auto;
+  padding-bottom: 17px;
 }
 
 .section-solution__begunok-list {
@@ -292,14 +296,14 @@ html {
 
 .section-aboutus__column {
   display: flex;
-  max-width: 900px;
+  max-width: 899px;
   flex-wrap: nowrap;
   flex-direction: column;
   margin-top: 28px;
 }
 
 .section-aboutus__moredetails {
-  margin-right: 33px;
+  margin-right: 13px;
   display: flex;
   align-items: flex-end;
   min-height: 622px;
@@ -342,20 +346,13 @@ html {
   border: 3px solid var(--color-dark-orange);
 }
 
-.section-aboutus__right {
-  display: grid;
-  align-content: space-around;
-}
-
-.card {
-  min-width: 870px;
-  border: 1px solid var(--color-light-grey);
-}
-
 .section-aboutus__card {
-  display: inline-flex;
+  display: flex;
   min-height: 295px;
-  min-width: 868px;
+  padding-right: 109px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid var(--color-light-grey);
 }
 
 .section-aboutus__card:not(:last-child) {
@@ -363,10 +360,11 @@ html {
 }
 
 .section-aboutus__card__img {
-  margin-top: 63px;
-  margin-left: 58px;
+  display: flex;
   width: 190px;
   height: 165px;
+  margin: auto 50px auto 59px;
+  align-items: center;
 }
 
 .consult {
@@ -379,8 +377,14 @@ html {
   background-repeat: no-repeat;
 }
 
+.card__img {
+  width: 190px;
+  height: 165px;
+}
+
 .section-aboutus__card__content {
-  margin: 45px 45px 0 50px;
+  width: 457px;
+  margin-top: -17px;
 }
 
 .section-aboutus__cardtitle {
@@ -391,7 +395,7 @@ html {
 }
 
 .section-aboutus__card-description {
-  width: 425px;
+  max-width: 425px;
   margin: 0;
   line-height: 32px;
 }
@@ -449,13 +453,13 @@ html {
   flex-grow: 1;
   align-items: stretch;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .section-howwework__opisanie {
   margin-top: 49px;
   margin-left: 2px;
-  max-width: 868px;
+  max-width: 857px;
 }
 
 .section-howwework__title-step {
@@ -510,18 +514,9 @@ html {
   color: var(--color-white);
 }
 
-.contract {
-  color: var(--color-dark-grey);
-}
-
-.section-howwework__img {
-  width: 871px;
-  min-height: 458px;
+.section-howwework__adaptive {
   margin-top: 53px;
-}
-
-.section-howwework__img__step {
-  max-width: 100%;
+  max-width: 871px;
 }
 
 /* Часто задаваемые вопросы */
@@ -549,12 +544,6 @@ html {
   border-bottom: 1px solid var(--color-light-grey);
 }
 
-.question {
-  font-size: 24px;
-  font-weight: 700;
-  transition: color .5s ease-out;
-}
-
 .section-questions__item:hover, .section-questions__item:hover+.section-questions__item {
   border-top: 1px solid var(--color-orange);
 }
@@ -573,6 +562,13 @@ html {
 
 .section-questions__item:hover svg path {
   fill: var(--color-white);
+}
+
+.question {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 20px;
+  transition: color .5s ease-out;
 }
 
 .question__link::before {
@@ -659,7 +655,7 @@ html {
 }
 
 .footter__left__info {
-  margin-right: 20px;
+  margin-right: 353px;
 }
 
 .footer__logo {
@@ -677,13 +673,13 @@ html {
   font-weight: 400;
 }
 
+.footer_item:not(:last-child) {
+  margin-bottom: 13.9px;
+}
+
 .footer__item__link {
   font-size: 18px;
   font-weight: 600;
-}
-
-.footer_item:not(:last-child) {
-  margin-bottom: 13.9px;
 }
 
 .footer__social {
@@ -859,10 +855,35 @@ html {
   line-height: 32px;
 }
 
+@media (max-width:1700px) {
+  .menu-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .section-solution__title {
+    font-size: 60px;
+    line-height: 74px;
+  }
+  .section-solution__description {
+    margin-top: 12px;
+    line-height: 24px;
+    font-size: 20px;
+  }
+  .section-aboutus__content {
+    flex-direction: column;
+  }
+  .footer__container {
+    padding: 49px 48px;
+  }
+  .footer__right__content {
+    display: none;
+  }
+}
+
 @media (max-width:1024px) {
   .header {
     padding: 0;
   }
+
   .section {
     padding: 0;
   }
@@ -870,16 +891,28 @@ html {
     padding: 0 50px;
   }
   .header__left {
-    margin-left: 0;
+    display: none;
   }
-  .menu-nav__logo {
+  .header__right {
+    width: 100%;
+  }
+  .menu-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 37px;
+    margin-bottom: 38px;
+    justify-content: space-between;
+  }
+  .header__nav__menu {
     display: block;
-    margin-right: 356px;
     margin-top: 5px;
   }
-  .menu-nav__logo-img {
-    max-width: 152px;
+  .menu-nav__logo1024 {
+    display: block;
+    width: 149px;
+    margin-top: 6px;
   }
+
   .menu-nav__list {
     display: none;
   }
@@ -893,23 +926,14 @@ html {
   .section-solution__content {
     padding-top: 103px;
     padding-left: 26px;
-    padding-right: 20px;
-  }
-  .section-solution__title {
-    font-size: 60px;
-    line-height: 74px;
-  }
-  .section-solution__description {
-    margin-top: 12px;
-    line-height: 24px;
-    font-size: 20px;
+    max-width: 793px;
   }
   .section-solution__btn {
     margin-top: 59px;
     padding: 19px 36px;
   }
   .section-solution__begunok {
-    margin-top: 115px;
+    margin: auto auto 9px;
   }
   .section-aboutus {
     margin-top: 85px;
@@ -925,12 +949,15 @@ html {
     margin-left: 0px;
     margin-top: 0px;
   }
-  .section-aboutus__column {
-    max-width: 924px;
-  }
   .section_aboutus__content {
     flex-direction: column;
     margin-top: 35px;
+  }
+  .section-aboutus__column {
+    max-width: 924px;
+  }
+  .section-aboutus__column:last-child {
+    margin-top: 33px;
   }
   .section-aboutus__moredetails {
     background-image: url(../img/aboutus1024.jpg);
@@ -940,12 +967,11 @@ html {
   .section-aboutus__moredetails__content {
     max-width: 924px;
   }
-  .section-aboutus__column:last-child {
-    margin-top: 33px;
+  .section-aboutus__card {
+    padding-right: 0;
   }
   .section-aboutus__card__img {
-    margin-top: 64px;
-    margin-left: 74px;
+    margin-left: 73px;
   }
   .section-aboutus__card__content {
     padding-top: 0px;
@@ -956,13 +982,15 @@ html {
   .section-howwework__list {
     margin-top: 50px;
   }
+  .section-howwework__content {
+    flex-wrap: nowrap;
+  }
   .section-howwework__opisanie {
     margin-top: 54px;
-    max-width: 536px;
   }
   .section-howwework__description-step {
     max-width: 437px;
-    margin: 10px 0 0 -1px;
+    margin-right: 48px;
   }
   .section-howwework__opisanie__buttons {
     margin-top: 23px;
@@ -973,8 +1001,7 @@ html {
   .contract-btn {
     padding: 20px 37px;
   }
-  .section-howwework__img {
-    max-width: 437px;
+  .section-howwework__adaptive {
     margin-top: 62px;
   }
   .section-questions {
@@ -994,11 +1021,13 @@ html {
   .footer {
     margin-top: 80px;
   }
-  .footer__container {
-    padding: 49px 48px;
-  }
+
   .footer__left {
     margin-right: 0;
+    margin-top: 53px;
+  }
+  .footer__left__info {
+    margin-right: 50px;
   }
   .footer__list {
     margin: 21px 0 0 1px;
@@ -1014,7 +1043,6 @@ html {
     margin-right: 4px;
   }
   .submit-btn {
-    margin-left: 1px;
     padding: 20px 36px;
   }
   .footer__right {
@@ -1022,27 +1050,16 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 858px) {
   .header {
-    max-width: 768px;
     margin: auto;
   }
   .header__container {
     max-height: 69px;
-    padding-right: 0px;
   }
-  .header__left {
-    margin-top: 1px;
-  }
-  .menu-nav__logo {
-    margin-right: 230px;
-    margin-top: 4px;
-  }
-  .header__logo {
-    margin-right: 156px;
-  }
-  .header__search {
-    margin-right: 48px;
+
+  .menu-nav__logo1024 {
+    margin-top: 8px;
   }
   .section-solution__container {
     min-height: 661px;
@@ -1059,7 +1076,7 @@ html {
     line-height: 61px;
   }
   .section-solution__description {
-    margin: 15px 0 0 0;
+    margin-top: 15px;
     line-height: 22px;
     font-size: 18px;
     max-width: 560px;
@@ -1080,7 +1097,7 @@ html {
     padding-left: 0px;
   }
   .section-aboutus__column {
-    min-width: 668px;
+    max-width: 668px;
     margin-top: 0;
   }
   .section-aboutus__moredetails {
@@ -1089,6 +1106,7 @@ html {
   }
   .section-aboutus__moredetails__content {
     padding: 0 41px;
+    max-width: 668px;
   }
   .section-aboutus__moredetails__description {
     margin-right: 58px;
@@ -1100,19 +1118,22 @@ html {
   .card {
     min-width: 668px;
   }
+  .section-aboutus__card__img {
+    margin-left: 39px;
+    margin-right: 0;
+    margin-top: 95px;
+    width: 115px;
+    height: 108px;
+  }
   .section-aboutus__card__content {
     margin-right: 28px;
-    margin-top: 15px;
-    margin-left: 17px;
+    margin-top: -18px;
+    margin-left: 15px;
   }
   .section-aboutus__card-description {
     width: 469px;
   }
-  .section-aboutus__card__img {
-    margin-left: 38px;
-    margin-top: 67px;
-    width: 114px;
-    height: 108px;
+  .card__img {
     background-size: contain;
   }
   .section-howwework {
@@ -1124,14 +1145,7 @@ html {
   }
   .section-howwework__content {
     flex-direction: column-reverse;
-  }
-  .section-howwework__img {
-    min-height: 284px;
-    max-height: 274px;
-    ;
-    margin-top: 50px;
-    background-size: cover;
-    max-width: 668px;
+    flex-wrap: nowrap;
   }
   .section-howwework__opisanie {
     margin-top: 41px;
@@ -1148,6 +1162,11 @@ html {
   .moredetails-btn {
     padding: 20px 37px;
   }
+  .section-howwework__adaptive {
+    margin-top: 50px;
+    background-size: cover;
+    max-width: 668px;
+  }
   .section-questions {
     margin-top: 85px;
     line-height: 57px;
@@ -1163,6 +1182,7 @@ html {
   }
   .footer__left {
     flex-direction: column-reverse;
+    margin-top: 0;
   }
   .footer__left__zayavka {
     margin-left: 3px;
@@ -1186,13 +1206,118 @@ html {
   }
 }
 
-@media (max-width: 320px) {
-  .header {
-    max-width: 320px;
+@media (max-width: 758px) {
+  .section-aboutus__column {
+    flex-direction: row;
+    max-height: 570px;
+    max-width: 628px;
   }
-  .header__left {
-    margin-top: 3px;
+  .section-aboutus__column:last-child {
+    flex-wrap: wrap;
+  }
+  .section-aboutus__moredetails {
+    min-height: 195px;
+    background: transparent;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+  .section-aboutus__moredetails-img {
+    min-height: 206px;
+    width: 308px;
+    background-image: url(../img/aboutus320.jpg);
+    background-repeat: no-repeat;
+  }
+  .section-aboutus__moredetails__content {
+    background-color: transparent;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+    max-width: 300px;
+  }
+  .section-aboutus__moredetails__description {
+    margin-right: 2px;
+    max-width: 295px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--color-black);
+  }
+  .section-aboutus__moredetails__btn {
+    padding: 11px 39px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-orange);
+  }
+  .card {
+    border: none;
+    min-width: 294px;
+  }
+  .section-aboutus__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section-aboutus__card:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 15px;
+    max-width: 293px;
+  }
+  .section-aboutus__card__img {
+    width: 64px;
+    height: 49px;
+    margin-left: 0;
+    margin-top: 11px;
+    margin-bottom: 0px;
+  }
+  .card__img {
+    width: 64px;
+    height: 49px;
+  }
+  .consult {
+    background: url(../img/Frame39.svg);
+  }
+  .stremlenie {
+    background: url(../img/Frame38.svg);
+  }
+  .section-aboutus__card__content {
+    margin: 0;
+    max-width: 293px;
+  }
+  .section-aboutus__cardtitle {
+    margin: 14px 0 0 0px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 21px;
+  }
+  .section-aboutus__card-description {
+    width: 291px;
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 5px;
+  }
 }
+
+@media (max-width: 690px) {
+  .section-solution__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .section-solution__description {
+    font-size: 15px;
+  }
+  .section-solution__btn {
+    margin-top: 32px;
+    font-size: 12px;
+    line-height: 34.6px;
+    padding: 2px 28px;
+    margin-right: 2px;
+  }
+  .section-howwework__step:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 460px) {
   .header__logo {
     margin-right: 0px;
   }
@@ -1202,11 +1327,10 @@ html {
   .menu-nav {
     margin-top: 38px;
   }
-  .menu-nav__logo {
-    margin-right: 63px;
-  }
-  .menu-nav__logo-img {
-    max-width: 109px;
+    .menu-nav__logo1024 {
+    margin-top: 4px;
+    width: 108px;
+    margin-right: 3px;
   }
   .header__search {
     margin-right: -2px;
@@ -1216,11 +1340,10 @@ html {
   }
   .section-solution__container {
     min-height: 308px;
-    background-image: url(../img/hero320.jpg);
   }
   .section-solution__content {
     display: flex;
-    padding: 28px 0;
+    padding: 29px 0 21px;
     flex-direction: column;
     align-items: center;
   }
@@ -1238,15 +1361,9 @@ html {
     letter-spacing: 0.6px;
     max-width: 245px;
   }
-  .section-solution__btn {
-    margin-top: 32px;
-    font-size: 12px;
-    line-height: 34.6px;
-    padding: 2px 28px;
-    margin-right: 2px;
-  }
   .section-solution__begunok {
-    margin-top: 3px;
+    margin-top: 8px;
+    padding-bottom: 3px;
   }
   .section-solution__begunok-list {
     margin-top: 0;
@@ -1274,72 +1391,11 @@ html {
   .section-aboutus__column {
     min-width: 300px;
   }
-  .section-aboutus__moredetails {
-    min-height: 609px;
-    align-items: center;
-    background-image: url(../img/aboutus320.jpg);
-  }
-  .section-aboutus__moredetails__content {
-    padding: 0 0px;
-    flex-direction: column;
-    background-color: transparent;
-    align-items: flex-start;
-    height: 189px;
-  }
-  .section-aboutus__moredetails__description {
-    color: var(--color-black);
-    margin: -1px 30px 0 0px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 28px;
-  }
-  .section-aboutus__moredetails__btn {
-    padding: 11px 42px;
-    color: var(--color-orange);
-    font-size: 12px;
-  }
   .section-aboutus__column:last-child {
-    margin-top: -189px;
-  }
-  .card {
-    border: none;
-    min-width: 300px;
-  }
-  .section-aboutus__card:not(:last-child) {
-    margin-bottom: 21px;
-  }
-  .section-aboutus__card__img {
-    width: 64px;
-    height: 49px;
-    margin-left: 0;
-    margin-top: 11px;
-  }
-  .consult {
-    background: url(../img/Frame39.svg);
-  }
-  .stremlenie {
-    background: url(../img/Frame38.svg);
-  }
-  .section-aboutus__card__content {
-    margin-right: 28px;
-    margin-top: 0;
-    margin-left: 0;
+    margin-top: 20px;
   }
   .section-aboutus__card {
-    flex-direction: column;
-  }
-  .section-aboutus__cardtitle {
-    margin: 14px 0 0 0px;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.2px;
-    line-height: 21px;
-  }
-  .section-aboutus__card-description {
-    width: 291px;
-    font-size: 14px;
-    line-height: 28px;
-    margin-top: 5px;
+    min-height: 281px;
   }
   .section-howwework {
     margin-top: 61px;
@@ -1350,13 +1406,13 @@ html {
   .section-howwework__step__btn {
     font-size: 13px;
   }
-  .section-howwework__img {
+  .section-howwework__step:not(:last-child) {
+    margin-right: 3px;
+  }
+  .section-howwework__adaptive {
     width: 291px;
     margin-top: 14px;
     min-height: 160px;
-  }
-  .section-howwework__step:not(:last-child) {
-    margin-right: 3px;
   }
   .section-howwework__opisanie {
     margin-top: 19px;
@@ -1414,6 +1470,35 @@ html {
   .footer__left {
     min-width: 291px;
   }
+  .footer__left__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    margin-top: 22px;
+    border-top: 1px solid var(--color-grey);
+  }
+  .footer__logo {
+    margin-top: 8px;
+    width: 132px;
+    height: auto;
+  }
+  .footer__social {
+    margin-top: 2px;
+    margin-left: 0px;
+  }
+  .footer__social__item {
+    width: 40px;
+    height: 40px;
+  }
+  .footer__social__item:not(:last-child) {
+    margin-right: 16px;
+  }
+  .footer__social__icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
   .footer__left__zayavka {
     margin: 34px 0 0 0;
     max-width: 290px;
@@ -1450,33 +1535,10 @@ html {
   .footer__checkbox-text {
     margin-left: 5px;
   }
-  .footer__left__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0px;
-    margin-top: 21px;
-    border-top: 1px solid var(--color-grey);
-  }
-  .footer__logo {
-    margin-top: 8px;
-    width: 132px;
-    height: auto;
-  }
-  .footer__social {
-    margin-top: 2px;
-    margin-left: 0px;
-  }
-  .footer__social__item {
-    width: 40px;
-    height: 40px;
-  }
-  .footer__social__icon {
-    display: flex;
-    width: 40px;
-    height: 40px;
-  }
-  .footer__social__item:not(:last-child) {
-    margin-right: 16px;
+}
+
+@media (max-width: 320px) {
+  .section-solution__container {
+    background-image: url(../img/hero320.jpg);
   }
 }

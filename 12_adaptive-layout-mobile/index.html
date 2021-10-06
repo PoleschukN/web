@@ -15,17 +15,19 @@
     <div class="container header__container">
       <div class="header__left">
         <a href="#" class="header__logo">
-          <picture>
-            <source media="(max-width: 1024px)" srcset="img/menu.svg" class="header-menu">
-            <img src="img/Logo.svg" alt="Евклид - проектные системы" class="logo-img">
-          </picture>
+          <img src="img/Logo.svg" alt="Евклид - проектные системы" class="logo-img">
         </a>
       </div>
       <div class="header__right">
         <nav class="menu-nav header__nav">
-          <div class="menu-nav__logo">
-            <a href="#" class="menu-nav__logo-link">
-              <img src="img/Logo.svg" alt="Евклид - проектные системы" class="menu-nav__logo-img">
+          <div class="header__nav__menu">
+            <a href="#" class="header__nav__menu-img">
+              <img src="img/menu.svg" alt="Меню" class="header-menu">
+            </a>
+          </div>
+          <div class="menu-nav__logo1024">
+            <a href="#" class="header__logo">
+              <img src="img/Logo.svg" alt="Евклид - проектные системы" class="logo-img">
             </a>
           </div>
           <ul class="menu-nav__list">
@@ -122,6 +124,7 @@
         <div class="section_aboutus__content">
           <div class="section-aboutus__column">
             <div class="section-aboutus__moredetails">
+              <div class="section-aboutus__moredetails-img"></div>
               <div class="section-aboutus__moredetails__content">
                 <div class="section-aboutus__moredetails__description">
                   Принимая во внимание показатели успешности,
@@ -136,7 +139,9 @@
           </div>
           <div class="section-aboutus__column">
             <div class="section-aboutus__card card">
-              <div class="section-aboutus__card__img consult"></div>
+              <div class="section-aboutus__card__img ">
+                <div class="consult card__img"></div>
+              </div>
               <div class="section-aboutus__card__content">
                 <h3 class="section-aboutus__cardtitle">
                   Консультация с широким активом</h3>
@@ -148,7 +153,9 @@
               </div>
             </div>
             <div class="section-aboutus__card card">
-              <div class="section-aboutus__card__img stremlenie"></div>
+              <div class="section-aboutus__card__img">
+                <div class=" stremlenie card__img"></div>
+              </div>
               <div class="section-aboutus__card__content">
                 <h3 class="section-aboutus__cardtitle">
                   В своем стремлении повысить</h3>
@@ -158,8 +165,6 @@
                   эксперимент проверки прогресса профессионального сообщества.
                 </p>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -213,10 +218,10 @@
               </button>
             </div>
           </div>
-          <div class="section-howwework__img">
-            <picture>
+          <div class="section-howwework__adaptive">
+            <picture class="section-howwework__adaptive-img">
               <source srcset="img/howwework320.jpg" media="(max-width: 320px)" class="section-howwework__img320">
-              <source srcset="img/howwework768.jpg" media="(max-width: 768px)" class="section-howwework__img768">
+              <source srcset="img/howwework768.jpg" media="(max-width: 858px)" class="section-howwework__img768">
               <source srcset="img/howwework1024.jpg" media="(max-width: 1024px)" class="section-howwework__img1024">
               <img src="img/howwework.jpg" alt="Шаг 1" class="section-howwework__img-origin">
             </picture>
