@@ -409,7 +409,7 @@ html {
 .section-howwework__list {
   display: flex;
   margin-left: 1px;
-  margin-top: 47px;
+  margin-top: 50px;
   font-size: 18px;
   font-weight: 400;
 }
@@ -476,7 +476,7 @@ html {
 }
 
 .section-howwework__opisanie__buttons {
-  margin-top: 52px;
+  margin-top: 50px;
   display: flex;
 }
 
@@ -515,7 +515,7 @@ html {
 }
 
 .section-howwework__adaptive {
-  margin-top: 53px;
+  margin-top: 55px;
   max-width: 871px;
 }
 
@@ -674,7 +674,7 @@ html {
 }
 
 .footer_item:not(:last-child) {
-  margin-bottom: 13.9px;
+  margin-bottom: 13.8px;
 }
 
 .footer__item__link {
@@ -683,7 +683,7 @@ html {
 }
 
 .footer__social {
-  margin-top: 96px;
+  margin-top: 95px;
   margin-left: 1px;
 }
 
@@ -726,7 +726,7 @@ html {
 .footer__left__zayavka {
   margin-top: 6px;
   max-width: 573px;
-  margin-right: 0px;
+  margin-right: 2px;
 }
 
 .footer__title {
@@ -883,7 +883,6 @@ html {
   .header {
     padding: 0;
   }
-
   .section {
     padding: 0;
   }
@@ -912,7 +911,6 @@ html {
     width: 149px;
     margin-top: 6px;
   }
-
   .menu-nav__list {
     display: none;
   }
@@ -940,6 +938,7 @@ html {
   }
   .section-title {
     margin-bottom: 9px;
+    margin-left: 0;
   }
   .aboutus__title {
     margin-left: 0;
@@ -952,6 +951,7 @@ html {
   .section_aboutus__content {
     flex-direction: column;
     margin-top: 35px;
+    padding-left: 0;
   }
   .section-aboutus__column {
     max-width: 924px;
@@ -961,20 +961,28 @@ html {
   }
   .section-aboutus__moredetails {
     background-image: url(../img/aboutus1024.jpg);
+    background-position-x: center;
     min-height: 639px;
     margin-right: 0;
   }
   .section-aboutus__moredetails__content {
     max-width: 924px;
   }
+  .section-aboutus__moredetails__description {
+    margin: 2px 161px 0 -1px;
+  }
   .section-aboutus__card {
     padding-right: 0;
+    min-height: 294px;
   }
   .section-aboutus__card__img {
-    margin-left: 73px;
+    margin-left: 76px;
   }
   .section-aboutus__card__content {
     padding-top: 0px;
+  }
+  .section-aboutus__cardtitle {
+    margin: 22px 0 10px 0px;
   }
   .section-howwework {
     margin-top: 85px;
@@ -993,7 +1001,7 @@ html {
     margin-right: 48px;
   }
   .section-howwework__opisanie__buttons {
-    margin-top: 23px;
+    margin-top: 24px;
   }
   .moredetails-btn {
     padding: 20px 36px;
@@ -1011,7 +1019,7 @@ html {
     margin-top: 30px;
   }
   .section-questions__item {
-    padding: 12px 0;
+    padding: 13px 0;
   }
   .question {
     font-size: 20px;
@@ -1019,12 +1027,14 @@ html {
     line-height: 30px;
   }
   .footer {
-    margin-top: 80px;
+    margin-top: 79px;
   }
-
+  .footer__container {
+    padding: 0 48px;
+  }
   .footer__left {
     margin-right: 0;
-    margin-top: 53px;
+    margin-top: 50px;
   }
   .footer__left__info {
     margin-right: 50px;
@@ -1033,7 +1043,7 @@ html {
     margin: 21px 0 0 1px;
   }
   .footer_item:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
   .footer__social__item:not(:last-child) {
     margin-right: 25px;
@@ -1057,7 +1067,9 @@ html {
   .header__container {
     max-height: 69px;
   }
-
+  .menu-nav {
+    margin-top: 34px;
+  }
   .menu-nav__logo1024 {
     margin-top: 8px;
   }
@@ -1082,8 +1094,8 @@ html {
     max-width: 560px;
   }
   .section-solution__btn {
-    margin-top: 58px;
-    padding: 17px 37px;
+    margin-top: 59px;
+    padding: 17px 36px;
     line-height: 42.6px;
   }
   .section-aboutus {
@@ -1148,7 +1160,7 @@ html {
     flex-wrap: nowrap;
   }
   .section-howwework__opisanie {
-    margin-top: 41px;
+    margin-top: 37px;
     margin-left: 0;
     max-width: 662px;
   }
@@ -1170,6 +1182,9 @@ html {
   .section-questions {
     margin-top: 85px;
     line-height: 57px;
+  }
+  .section-questions__item {
+    padding: 12.5px 0;
   }
   .question {
     max-width: 577px;
@@ -1208,65 +1223,40 @@ html {
 
 @media (max-width: 758px) {
   .section-aboutus__column {
-    flex-direction: row;
-    max-height: 570px;
-    max-width: 628px;
+    max-width: 653px;
   }
   .section-aboutus__column:last-child {
     flex-wrap: wrap;
   }
-  .section-aboutus__moredetails {
-    min-height: 195px;
-    background: transparent;
-    margin-right: auto;
-    flex-wrap: wrap;
-  }
-  .section-aboutus__moredetails-img {
-    min-height: 206px;
-    width: 308px;
-    background-image: url(../img/aboutus320.jpg);
-    background-repeat: no-repeat;
-  }
   .section-aboutus__moredetails__content {
-    background-color: transparent;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0;
-    max-width: 300px;
+    justify-content: space-evenly;
   }
   .section-aboutus__moredetails__description {
     margin-right: 2px;
-    max-width: 295px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 28px;
-    color: var(--color-black);
   }
   .section-aboutus__moredetails__btn {
     padding: 11px 39px;
     font-size: 13px;
     font-weight: 500;
-    color: var(--color-orange);
   }
   .card {
-    border: none;
     min-width: 294px;
   }
   .section-aboutus__card {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 17px;
   }
   .section-aboutus__card:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: 15px;
-    max-width: 293px;
+    margin-bottom: 30px;
   }
   .section-aboutus__card__img {
     width: 64px;
     height: 49px;
-    margin-left: 0;
-    margin-top: 11px;
-    margin-bottom: 0px;
+    margin: -13px 7px 0 7px;
   }
   .card__img {
     width: 64px;
@@ -1279,8 +1269,8 @@ html {
     background: url(../img/Frame38.svg);
   }
   .section-aboutus__card__content {
-    margin: 0;
-    max-width: 293px;
+    margin-right: inherit;
+    width: auto;
   }
   .section-aboutus__cardtitle {
     margin: 14px 0 0 0px;
@@ -1290,7 +1280,8 @@ html {
     line-height: 21px;
   }
   .section-aboutus__card-description {
-    width: 291px;
+    width: auto;
+    max-width: none;
     font-size: 14px;
     line-height: 28px;
     margin-top: 5px;
@@ -1315,9 +1306,35 @@ html {
   .section-howwework__step:not(:last-child) {
     margin-right: 0;
   }
+  .section-aboutus__card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .section-aboutus__card__img {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .footer__left__zayavka {
+    display: flex;
+    margin: 34px 0 0 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer__form {
+    margin-top: 20px;
+  }
+  .input {
+    padding-left: 21px;
+    padding-top: 0px;
+    font-size: 14px;
+  }
+  .footer__form__massage {
+    padding-top: 22px;
+  }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .header__logo {
     margin-right: 0px;
   }
@@ -1327,7 +1344,7 @@ html {
   .menu-nav {
     margin-top: 38px;
   }
-    .menu-nav__logo1024 {
+  .menu-nav__logo1024 {
     margin-top: 4px;
     width: 108px;
     margin-right: 3px;
@@ -1343,14 +1360,14 @@ html {
   }
   .section-solution__content {
     display: flex;
-    padding: 29px 0 21px;
+    padding: 31px 0;
     flex-direction: column;
     align-items: center;
   }
   .section-solution__title {
-    margin-top: 34px;
+    margin-top: 30px;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 24px;
     text-align: center;
   }
   .section-solution__description {
@@ -1361,8 +1378,11 @@ html {
     letter-spacing: 0.6px;
     max-width: 245px;
   }
+  .section-solution__btn {
+    margin-top: 33px;
+    margin-right: 0;
+  }
   .section-solution__begunok {
-    margin-top: 8px;
     padding-bottom: 3px;
   }
   .section-solution__begunok-list {
@@ -1374,7 +1394,7 @@ html {
     height: 10px;
   }
   .section-aboutus {
-    margin-top: 63px;
+    margin-top: 61px;
   }
   .section-title {
     font-size: 24px;
@@ -1382,7 +1402,7 @@ html {
   .section-aboutus__description {
     font-size: 14px;
     line-height: 28px;
-    margin-top: 20px;
+    margin-top: 21px;
     margin-bottom: 0;
   }
   .section_aboutus__content {
@@ -1394,14 +1414,50 @@ html {
   .section-aboutus__column:last-child {
     margin-top: 20px;
   }
+  .section-aboutus__moredetails {
+    background-image: url(../img/aboutus320.jpg);
+    min-height: 401px;
+    max-width: 100%;
+  }
+  .section-aboutus__moredetails__content {
+    background-color: transparent;
+    padding: 0;
+  }
+  .section-aboutus__moredetails__description {
+    color: var(--color-black);
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+  .section-aboutus__moredetails__btn {
+    padding: 11px 39px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-orange);
+  }
   .section-aboutus__card {
-    min-height: 281px;
+    min-height: 184px;
+    border: none;
+    padding: 0;
+    justify-content: space-between;
+  }
+  .section-aboutus__card:not(:last-child) {
+    margin-bottom: 22px;
+  }
+  .section-aboutus__card__img {
+    margin: 9px 0 15px 0;
+  }
+  .section-aboutus__card__content {
+    max-width: 100%;
+    margin: 0;
+  }
+  .section-aboutus__cardtitle {
+    margin: 0;
   }
   .section-howwework {
     margin-top: 61px;
   }
   .section-howwework__list {
-    margin-top: 16px;
+    margin-top: 17px;
   }
   .section-howwework__step__btn {
     font-size: 13px;
@@ -1426,7 +1482,7 @@ html {
   .section-howwework__description-step {
     line-height: 28px;
     font-size: 14px;
-    margin-top: 14px;
+    margin-top: 15px;
   }
   .section-howwework__opisanie__buttons {
     margin-top: 13px;
@@ -1499,30 +1555,12 @@ html {
     width: 40px;
     height: 40px;
   }
-  .footer__left__zayavka {
-    margin: 34px 0 0 0;
-    max-width: 290px;
-  }
-  .footer__form {
-    margin-top: 20px;
-  }
-  .input {
-    max-width: 291px;
-    padding-left: 21px;
-    padding-top: 0px;
-    font-size: 14px;
-  }
-  .footer__form__massage {
-    padding-top: 22px;
-  }
   .footer__form__btn {
     display: flex;
     margin-top: 0;
     flex-direction: column;
-    align-items: flex-start;
   }
   .submit-btn {
-    margin-left: 56px;
     padding: 11px 27px;
     font-size: 12px;
   }
@@ -1540,5 +1578,22 @@ html {
 @media (max-width: 320px) {
   .section-solution__container {
     background-image: url(../img/hero320.jpg);
+  }
+  .section-aboutus__moredetails {
+    max-width: 292px;
+  }
+  .section-aboutus__card__content {
+    max-width: 292px;
+  }
+  .footer__form {
+    margin-top: 11px;
+  }
+  .footer__form__btn {
+    align-items: baseline;
+  }
+  .submit-btn {
+    padding: 11px 27px;
+    font-size: 12px;
+    margin-left: 56px;
   }
 }
