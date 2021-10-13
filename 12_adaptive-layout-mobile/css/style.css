@@ -284,14 +284,13 @@ html {
   line-height: 32px;
 }
 
-.section_aboutus__content {
+.section-aboutus__content {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
   align-items: stretch;
   margin-top: 20px;
   padding-left: 2px;
-  flex-wrap: wrap;
 }
 
 .section-aboutus__column {
@@ -870,6 +869,10 @@ html {
   }
   .section-aboutus__content {
     flex-direction: column;
+    align-items: center;
+  }
+  .section-aboutus__moredetails {
+    margin-right: 0;
   }
   .footer__container {
     padding: 49px 48px;
@@ -948,10 +951,11 @@ html {
     margin-left: 0px;
     margin-top: 0px;
   }
-  .section_aboutus__content {
+  .section-aboutus__content {
     flex-direction: column;
     margin-top: 35px;
     padding-left: 0;
+    align-items: stretch;
   }
   .section-aboutus__column {
     max-width: 924px;
@@ -1104,9 +1108,10 @@ html {
   .section-title {
     margin-left: 0px;
   }
-  .section_aboutus__content {
+  .section-aboutus__content {
     margin-top: 60px;
     padding-left: 0px;
+    align-items: center;
   }
   .section-aboutus__column {
     max-width: 668px;
@@ -1228,20 +1233,27 @@ html {
   .section-aboutus__column:last-child {
     flex-wrap: wrap;
   }
+  .section-aboutus__moredetails {
+    background-size: auto 70%;
+  }
   .section-aboutus__moredetails__content {
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: var(--color-white);
+    padding: 0 21px;
   }
   .section-aboutus__moredetails__description {
     margin-right: 2px;
     font-size: 14px;
     font-weight: 400;
+    color: black;
   }
   .section-aboutus__moredetails__btn {
     padding: 11px 39px;
     font-size: 13px;
     font-weight: 500;
+    color: var(--color-orange);
   }
   .card {
     min-width: 294px;
@@ -1405,8 +1417,9 @@ html {
     margin-top: 21px;
     margin-bottom: 0;
   }
-  .section_aboutus__content {
+  .section-aboutus__content {
     margin-top: 13px;
+    margin-left: 9px;
   }
   .section-aboutus__column {
     min-width: 300px;
@@ -1416,6 +1429,7 @@ html {
   }
   .section-aboutus__moredetails {
     background-image: url(../img/aboutus320.jpg);
+    background-size: auto;
     min-height: 401px;
     max-width: 100%;
   }
