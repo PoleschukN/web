@@ -1232,6 +1232,7 @@ html {
   }
   .section-aboutus__column:last-child {
     flex-wrap: wrap;
+    margin-top: 0;
   }
   .section-aboutus__moredetails {
     background-size: auto 70%;
@@ -1241,7 +1242,7 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: var(--color-white);
-    padding: 0 21px;
+    padding: 0;
   }
   .section-aboutus__moredetails__description {
     margin-right: 2px;
@@ -1260,10 +1261,12 @@ html {
   }
   .section-aboutus__card {
     justify-content: space-evenly;
-    padding: 0 17px;
+    border: none;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .section-aboutus__card:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   .section-aboutus__card__img {
     width: 64px;
@@ -1282,6 +1285,7 @@ html {
   }
   .section-aboutus__card__content {
     margin-right: inherit;
+    margin-left: 0;
     width: auto;
   }
   .section-aboutus__cardtitle {
@@ -1297,6 +1301,9 @@ html {
     font-size: 14px;
     line-height: 28px;
     margin-top: 5px;
+  }
+  .section-howwework {
+    margin-top: 59px;
   }
 }
 
@@ -1321,7 +1328,7 @@ html {
   .section-aboutus__card {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 20px 0;
   }
   .section-aboutus__card__img {
     margin-top: 0;
@@ -1432,10 +1439,6 @@ html {
     background-size: auto;
     min-height: 401px;
     max-width: 100%;
-  }
-  .section-aboutus__moredetails__content {
-    background-color: transparent;
-    padding: 0;
   }
   .section-aboutus__moredetails__description {
     color: var(--color-black);
