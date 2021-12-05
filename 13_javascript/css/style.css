@@ -120,12 +120,51 @@ html {
   margin-bottom: 38px;
 }
 
-.header__nav__menu {
+.header__nav__burger {
   display: none;
 }
 
 .menu-nav__logo1024 {
   display: none;
+}
+
+.header__nav__burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 768px;
+  max-height: 768px;
+  padding-left: 50px;
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(-101%);
+  transition: transform .3s ease-in-out;
+  z-index: 12;
+}
+
+.header__nav__burger-menu.burger-menu__is-active {
+  transform: none;
+}
+
+.burger-menu__close__link {
+  display: inline-block;
+  margin-top: 39px;
+}
+
+.header__nav__burger-menu__list {
+  margin-top: 100px;
+
+}
+
+.header__nav__burger-menu__item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.burger-menu__link {
+  color: var(--color-black);
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .menu-nav__list {
@@ -172,35 +211,134 @@ html {
   height: 30px;
   border: 2px solid var(--color-white);
   padding: 2px 1px 1px 2px;
+  position: absolute;
+}
+
+.form-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: var(--color-light-grey);
+  border-radius: 15px;
+  top: -13px;
+  right: 458px;
+  width: 539px;
+  height: 60px;
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateY(-201%);
+  transition: transform .3s ease-in-out;
+  z-index: 12;
+}
+
+.form-search.search__is-active {
+  transform: none;
+}
+
+.input-search {
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  width: 412px;
+  margin-left: 32px;
+  margin-right: 14px;
 }
 
 .menu-nav__search svg path {
   transition: stroke .3s ease-out;
 }
 
-.menu-nav__search:hover svg rect, .menu-nav__search:active svg rect {
+.menu-nav__search:hover svg rect, .menu-nav__search:active svg rect,
+.menu-nav__form-search:hover svg rect, .menu-nav__form-search:active svg rect,
+.menu-nav__form-close:hover svg rect {
   fill: var(--color-orange);
 }
 
-.menu-nav__search:hover svg path, .menu-nav__search:active svg path {
+.menu-nav__search:hover svg path, .menu-nav__search:active svg path,
+.menu-nav__form-search:hover svg path, .menu-nav__form-search:active svg path,
+.menu-nav__form-close:hover svg circle {
   stroke: var(--color-orange);
 }
 
-.menu-nav__search:focus {
+.menu-nav__form-close:active svg rect {
+  fill: var(--color-black);
+}
+
+.menu-nav__form-close:active svg circle {
+  stroke: var(--color-black);
+}
+
+.menu-nav__search:focus,
+.menu-nav__form-search:focus,
+.menu-nav__form-close:focus {
   outline: none;
   border: 2px solid var(--color-orange);
 }
 
+.menu-nav__form-close {
+  margin-left: 20px;
+}
+
 /* Проектные решения */
+
+.section-solution {
+  position: relative;
+}
+
+.section-solution .swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.swiper {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-slide:nth-child(1) {
+  background-image: url(../img/hero1.jpg);
+}
+
+.swiper-slide:nth-child(2) {
+  background-image: url(../img/hero2.jpg);
+}
+
+.swiper-slide:nth-child(3) {
+  background-image: url(../img/hero3.jpg);
+}
+
+.swiper-pagination {
+  position: relative;
+  top: -45px;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: var(--color-white);
+  opacity: .4;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-white);
+  opacity: 1;
+}
 
 .section-solution__container {
   display: flex;
   min-height: 619px;
-  background-image: url(../img/hero1.jpg);
   background-repeat: no-repeat;
-  padding: 37px 81px 0 81px;
+  padding: 35px 81px 0 81px;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .section-solution__content {
@@ -433,7 +571,7 @@ html {
   transition: color .3s ease-out;
 }
 
-.link:hover, .section-howwework__step__btn-active {
+.link:hover, .section-howwework__step__btn--active {
   color: var(--color-orange);
 }
 
@@ -448,6 +586,10 @@ html {
 }
 
 .section-howwework__content {
+  display: none;
+}
+
+.section-howwework__content--active {
   display: flex;
   flex-grow: 1;
   align-items: stretch;
@@ -456,6 +598,9 @@ html {
 }
 
 .section-howwework__opisanie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top: 49px;
   margin-left: 2px;
   max-width: 857px;
@@ -475,7 +620,7 @@ html {
 }
 
 .section-howwework__opisanie__buttons {
-  margin-top: 50px;
+  margin-bottom: 6px;
   display: flex;
 }
 
@@ -524,14 +669,24 @@ html {
   margin-top: 102px;
 }
 
-.section-questions__list {
+.accordion {
   margin-top: 43px;
+}
+
+.ui-widget {
+  font-family: Montserrat, sans-serif;
+  font-size: inherit;
+}
+
+.ui-helper-reset {
+  line-height: normal;
 }
 
 .section-questions__item {
   min-height: 111px;
   padding: 17px 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid var(--color-light-grey);
@@ -563,11 +718,62 @@ html {
   fill: var(--color-white);
 }
 
+.ui-accordion-header {
+  font-weight: 700;
+  transition: color .5s ease-out;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  font-size: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ui-state-active,
+.ui-state-default {
+  border: none;
+  background: none;
+  color: #000;
+}
+
+.ui-icon {
+  display: none;
+}
+
+.ui-accordion-header-active .question__link svg {
+  transform: rotate(45deg);
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0;
+  max-width: 1003px;
+}
+
+.ui-widget-content {
+  border: none;
+}
+
 .question {
   font-size: 24px;
-  font-weight: 700;
-  margin-right: 20px;
-  transition: color .5s ease-out;
+  margin: 0;
+}
+
+.question__link {
+  margin-top: 2px;
+}
+
+.question__link::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.ui-accordion-content-active {
+  display: none;
 }
 
 .question__link::before {
@@ -598,7 +804,7 @@ html {
   border-top: 1px solid var(--color-orange);
 }
 
-.section-questions__item:hover .question, .section-questions__item:focus-within .question {
+.section-questions__item:hover .ui-accordion-header, .section-questions__item:focus-within .ui-accordion-header {
   color: var(--color-orange);
 }
 
@@ -606,15 +812,18 @@ html {
   border-bottom: 1px solid var(--color-orange);
 }
 
-.section-questions__item:active .question__link svg {
+.section-questions__item:active .question__link svg,
+.ui-accordion-header-active .question__link svg {
   transform: rotate(45deg);
 }
 
-.section-questions__item:active .question__link svg ellipse {
+.section-questions__item:active .question__link svg ellipse,
+.ui-accordion-header-active .question__link svg ellipse {
   fill: #ececec;
 }
 
-.section-questions__item:active .question__link path {
+.section-questions__item:active .question__link path,
+.ui-accordion-header-active .question__link path {
   fill: var(--color-grey);
 }
 
@@ -622,7 +831,7 @@ html {
   border-top: 1px solid var(--color-light-grey);
 }
 
-.section-questions__item:active .question {
+.section-questions__item:active .ui-accordion-header {
   color: var(--color-black)
 }
 
@@ -630,8 +839,28 @@ html {
   border-bottom: 1px solid var(--color-light-grey);
 }
 
-/* Футер */
+.section-questions__answer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--color-dark-grey);
+}
 
+.section-questions__answer__paragraf {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.first-paragraph {
+  margin-top: 14px;
+}
+
+.last-paragraph {
+  margin-bottom: 23px;
+}
+
+/* Футер */
 .footer {
   margin-top: 97px;
 }
@@ -858,25 +1087,35 @@ html {
   .menu-nav__item:not(:last-child) {
     margin-right: 50px;
   }
+
   .section-solution__title {
     font-size: 60px;
     line-height: 74px;
   }
+
   .section-solution__description {
     margin-top: 12px;
     line-height: 24px;
     font-size: 20px;
   }
+
   .section-aboutus__content {
     flex-direction: column;
     align-items: center;
   }
+
   .section-aboutus__moredetails {
     margin-right: 0;
   }
+
+  .ui-accordion .ui-accordion-content {
+    max-width: 850px;
+  }
+
   .footer__container {
     padding: 49px 48px;
   }
+
   .footer__right__content {
     display: none;
   }
@@ -886,18 +1125,23 @@ html {
   .header {
     padding: 0;
   }
+
   .section {
     padding: 0;
   }
+
   .container {
     padding: 0 50px;
   }
+
   .header__left {
     display: none;
   }
+
   .header__right {
     width: 100%;
   }
+
   .menu-nav {
     display: flex;
     align-items: center;
@@ -905,160 +1149,222 @@ html {
     margin-bottom: 38px;
     justify-content: space-between;
   }
-  .header__nav__menu {
+
+  .header__nav__burger {
     display: block;
     margin-top: 5px;
   }
+
+  .header__nav__burger-menu {
+    display: block;
+  }
+
   .menu-nav__logo1024 {
     display: block;
     width: 149px;
     margin-top: 6px;
   }
+
+
   .menu-nav__list {
     display: none;
   }
+
   .section-solution {
     padding: 0 50px;
   }
+
   .section-solution__container {
     min-height: 668px;
-    background-image: url(../img/hero1024.jpg);
+    /* background-image: url(../img/hero1024.jpg); */
   }
+
   .section-solution__content {
     padding-top: 103px;
     padding-left: 26px;
     max-width: 793px;
   }
+
   .section-solution__btn {
     margin-top: 59px;
     padding: 19px 36px;
   }
+
   .section-solution__begunok {
     margin: auto auto 9px;
   }
+
   .section-aboutus {
     margin-top: 85px;
   }
+
   .section-title {
     margin-bottom: 9px;
     margin-left: 0;
   }
+
   .aboutus__title {
     margin-left: 0;
     margin-bottom: 9px;
   }
+
   .section-aboutus__description {
     margin-left: 0px;
     margin-top: 0px;
   }
+
   .section-aboutus__content {
     flex-direction: column;
     margin-top: 35px;
     padding-left: 0;
     align-items: stretch;
   }
+
   .section-aboutus__column {
     max-width: 924px;
   }
+
   .section-aboutus__column:last-child {
     margin-top: 33px;
   }
+
   .section-aboutus__moredetails {
     background-image: url(../img/aboutus1024.jpg);
     background-position-x: center;
     min-height: 639px;
     margin-right: 0;
   }
+
   .section-aboutus__moredetails__content {
     max-width: 924px;
   }
+
   .section-aboutus__moredetails__description {
     margin: 2px 161px 0 -1px;
   }
+
   .section-aboutus__card {
     padding-right: 0;
     min-height: 294px;
   }
+
   .section-aboutus__card__img {
     margin-left: 76px;
   }
+
   .section-aboutus__card__content {
     padding-top: 0px;
   }
+
   .section-aboutus__cardtitle {
     margin: 22px 0 10px 0px;
   }
+
   .section-howwework {
     margin-top: 85px;
   }
+
   .section-howwework__list {
     margin-top: 50px;
   }
+
   .section-howwework__content {
     flex-wrap: nowrap;
   }
+
   .section-howwework__opisanie {
     margin-top: 54px;
   }
+
   .section-howwework__description-step {
     max-width: 437px;
     margin-right: 48px;
   }
+
   .section-howwework__opisanie__buttons {
     margin-top: 24px;
   }
+
   .moredetails-btn {
     padding: 20px 36px;
   }
+
   .contract-btn {
     padding: 20px 37px;
   }
+
   .section-howwework__adaptive {
     margin-top: 62px;
   }
+
   .section-questions {
     margin-top: 81px;
   }
+
+  .accordion {
+    margin-top: 28px;
+  }
+
   .section-questions__list {
     margin-top: 30px;
   }
+
   .section-questions__item {
-    padding: 13px 0;
+    padding: 27px 0;
   }
-  .question {
+
+  .ui-accordion .ui-accordion-header {
     font-size: 20px;
-    max-width: 746px;
     line-height: 30px;
   }
+
+  .question {
+    font-size: 20px;
+    width: 746px;
+  }
+
+  .ui-accordion .ui-accordion-content {
+    max-width: 650px;
+  }
+
   .footer {
     margin-top: 79px;
   }
+
   .footer__container {
     padding: 0 48px;
   }
+
   .footer__left {
     margin-right: 0;
     margin-top: 50px;
   }
+
   .footer__left__info {
     margin-right: 50px;
   }
+
   .footer__list {
     margin: 21px 0 0 1px;
   }
+
   .footer_item:not(:last-child) {
     margin-bottom: 14px;
   }
+
   .footer__social__item:not(:last-child) {
     margin-right: 25px;
   }
+
   .footer__left__zayavka {
     max-width: 540px;
     margin-right: 4px;
   }
+
   .submit-btn {
     padding: 20px 36px;
   }
+
   .footer__right {
     display: none;
   }
@@ -1068,73 +1374,95 @@ html {
   .header {
     margin: auto;
   }
+
   .header__container {
     max-height: 69px;
   }
+
   .menu-nav {
     margin-top: 34px;
   }
+
   .menu-nav__logo1024 {
     margin-top: 8px;
   }
+
+  .header__nav__burger-menu {
+    max-height: 731px;
+  }
+
   .section-solution__container {
     min-height: 661px;
     padding: 0;
-    background-image: url(../img/hero768.jpg);
+    /* background-image: url(../img/hero768.jpg); */
   }
+
   .section-solution__content {
     padding-left: 40px;
     padding-top: 28px;
   }
+
   .section-solution__title {
     margin-top: 135px;
     font-size: 50px;
     line-height: 61px;
   }
+
   .section-solution__description {
     margin-top: 15px;
     line-height: 22px;
     font-size: 18px;
     max-width: 560px;
   }
+
   .section-solution__btn {
     margin-top: 59px;
     padding: 17px 36px;
     line-height: 42.6px;
   }
+
   .section-aboutus {
     margin-top: 86px;
   }
+
   .section-title {
     margin-left: 0px;
   }
+
   .section-aboutus__content {
     margin-top: 60px;
     padding-left: 0px;
     align-items: center;
   }
+
   .section-aboutus__column {
     max-width: 668px;
     margin-top: 0;
   }
+
   .section-aboutus__moredetails {
     min-height: 649px;
     background-image: url(../img/aboutus768.jpg);
   }
+
   .section-aboutus__moredetails__content {
     padding: 0 41px;
     max-width: 668px;
   }
+
   .section-aboutus__moredetails__description {
     margin-right: 58px;
     margin-top: 3px;
   }
+
   .section-aboutus__card {
     min-height: 235px;
   }
+
   .card {
     min-width: 668px;
   }
+
   .section-aboutus__card__img {
     margin-left: 39px;
     margin-right: 0;
@@ -1142,101 +1470,138 @@ html {
     width: 115px;
     height: 108px;
   }
+
   .section-aboutus__card__content {
     margin-right: 28px;
     margin-top: -18px;
     margin-left: 15px;
   }
+
   .section-aboutus__card-description {
     width: 469px;
   }
+
   .card__img {
     background-size: contain;
   }
+
   .section-howwework {
     margin-top: 87px;
   }
+
   .section-howwework__list {
     justify-content: space-between;
     margin-top: 47px;
   }
+
   .section-howwework__content {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
   }
+
   .section-howwework__opisanie {
     margin-top: 37px;
     margin-left: 0;
     max-width: 662px;
   }
+
   .section-howwework__description-step {
     margin: 10px auto 0 0px;
     max-width: max-content;
   }
+
   .section-howwework__opisanie__buttons {
     margin-top: 24px;
   }
+
   .moredetails-btn {
     padding: 20px 37px;
   }
+
   .section-howwework__adaptive {
     margin-top: 50px;
     background-size: cover;
     max-width: 668px;
   }
+
   .section-questions {
     margin-top: 85px;
     line-height: 57px;
   }
+
   .section-questions__item {
-    padding: 12.5px 0;
+    padding: 28px 0;
   }
+
   .question {
-    max-width: 577px;
+    width: 577px;
   }
+
+  .ui-accordion .ui-accordion-content {
+    max-width: 500px;
+  }
+
   .footer {
     margin-top: 79px;
   }
+
   .footer__container {
     padding: 52px 47px;
   }
+
   .footer__left {
     flex-direction: column-reverse;
     margin-top: 0;
   }
+
   .footer__left__zayavka {
     margin-left: 3px;
     margin-top: 4px;
   }
+
   .footer__left__info {
     margin-top: 50px;
     margin-left: 2px;
   }
+
   .footer__list {
     display: none;
   }
+
   .footer__social {
     margin-top: 12px;
   }
+
   .footer__social__list {
     margin-bottom: 50px;
   }
+
   .footer__social__item:not(:last-child) {
     margin-right: 25px;
   }
 }
 
 @media (max-width: 758px) {
+
+
+
+  .burger-menu__close__link {
+    margin-top: 21px;
+  }
+
   .section-aboutus__column {
     max-width: 653px;
   }
+
   .section-aboutus__column:last-child {
     flex-wrap: wrap;
     margin-top: 0;
   }
+
   .section-aboutus__moredetails {
     background-size: auto 70%;
   }
+
   .section-aboutus__moredetails__content {
     align-items: flex-start;
     flex-direction: column;
@@ -1244,50 +1609,61 @@ html {
     background-color: var(--color-white);
     padding: 0;
   }
+
   .section-aboutus__moredetails__description {
     margin-right: 2px;
     font-size: 14px;
     font-weight: 400;
     color: black;
   }
+
   .section-aboutus__moredetails__btn {
     padding: 11px 39px;
     font-size: 13px;
     font-weight: 500;
     color: var(--color-orange);
   }
+
   .card {
     min-width: 294px;
   }
+
   .section-aboutus__card {
     justify-content: space-evenly;
     border: none;
     flex-direction: column;
     align-items: flex-start;
   }
+
   .section-aboutus__card:not(:last-child) {
     margin-bottom: 0;
   }
+
   .section-aboutus__card__img {
     width: 64px;
     height: 49px;
     margin: -13px 7px 0 7px;
   }
+
   .card__img {
     width: 64px;
     height: 49px;
   }
+
   .consult {
     background: url(../img/Frame39.svg);
   }
+
   .stremlenie {
     background: url(../img/Frame38.svg);
   }
+
   .section-aboutus__card__content {
     margin-right: inherit;
     margin-left: 0;
     width: auto;
   }
+
   .section-aboutus__cardtitle {
     margin: 14px 0 0 0px;
     font-size: 18px;
@@ -1295,6 +1671,7 @@ html {
     letter-spacing: -0.2px;
     line-height: 21px;
   }
+
   .section-aboutus__card-description {
     width: auto;
     max-width: none;
@@ -1302,6 +1679,7 @@ html {
     line-height: 28px;
     margin-top: 5px;
   }
+
   .section-howwework {
     margin-top: 59px;
   }
@@ -1312,9 +1690,11 @@ html {
     font-size: 40px;
     line-height: 46px;
   }
+
   .section-solution__description {
     font-size: 15px;
   }
+
   .section-solution__btn {
     margin-top: 32px;
     font-size: 12px;
@@ -1322,32 +1702,43 @@ html {
     padding: 2px 28px;
     margin-right: 2px;
   }
+
   .section-howwework__step:not(:last-child) {
     margin-right: 0;
   }
+
   .section-aboutus__card {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 0;
   }
+
   .section-aboutus__card__img {
     margin-top: 0;
     margin-bottom: 20px;
   }
+
+  .ui-accordion .ui-accordion-content {
+    max-width: 350px;
+  }
+
   .footer__left__zayavka {
     display: flex;
     margin: 34px 0 0 0;
     flex-direction: column;
     align-items: stretch;
   }
+
   .footer__form {
     margin-top: 20px;
   }
+
   .input {
     padding-left: 21px;
     padding-top: 0px;
     font-size: 14px;
   }
+
   .footer__form__massage {
     padding-top: 22px;
   }
@@ -1357,38 +1748,70 @@ html {
   .header__logo {
     margin-right: 0px;
   }
+
   .container {
     padding: 0 15px;
   }
+
   .menu-nav {
     margin-top: 38px;
   }
+
   .menu-nav__logo1024 {
     margin-top: 4px;
     width: 108px;
     margin-right: 3px;
   }
+
   .header__search {
     margin-right: -2px;
   }
+
+
+  .header__nav__burger-menu {
+    width: 320px;
+    max-height: 377px;
+    padding-left: 15px;
+  }
+
+  .burger-menu__close__link {
+    margin-top: 23px;
+  }
+
+  .header__nav__burger-menu__list {
+    margin-top: 32px;
+  }
+
+  .header__nav__burger-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .burger-menu__link {
+    font-size: 16px;
+  }
+
   .section-solution {
     padding: 0 15px;
   }
+
   .section-solution__container {
     min-height: 308px;
   }
+
   .section-solution__content {
     display: flex;
     padding: 31px 0;
     flex-direction: column;
     align-items: center;
   }
+
   .section-solution__title {
     margin-top: 30px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
   }
+
   .section-solution__description {
     margin: 8px 0 0 0;
     line-height: 15px;
@@ -1397,152 +1820,201 @@ html {
     letter-spacing: 0.6px;
     max-width: 245px;
   }
+
   .section-solution__btn {
     margin-top: 33px;
     margin-right: 0;
   }
+
   .section-solution__begunok {
     padding-bottom: 3px;
   }
+
   .section-solution__begunok-list {
     margin-top: 0;
     margin-left: 15px;
   }
+
   .begunok-step__img svg {
     width: 10px;
     height: 10px;
   }
+
   .section-aboutus {
     margin-top: 61px;
   }
+
   .section-title {
     font-size: 24px;
   }
+
   .section-aboutus__description {
     font-size: 14px;
     line-height: 28px;
     margin-top: 21px;
     margin-bottom: 0;
   }
+
   .section-aboutus__content {
     margin-top: 13px;
     margin-left: 9px;
   }
+
   .section-aboutus__column {
     min-width: 300px;
   }
+
   .section-aboutus__column:last-child {
     margin-top: 20px;
   }
+
   .section-aboutus__moredetails {
     background-image: url(../img/aboutus320.jpg);
     background-size: auto;
     min-height: 401px;
     max-width: 100%;
   }
+
   .section-aboutus__moredetails__description {
     color: var(--color-black);
     line-height: 28px;
     margin-bottom: 8px;
   }
+
   .section-aboutus__moredetails__btn {
     padding: 11px 39px;
     font-size: 13px;
     font-weight: 500;
     color: var(--color-orange);
   }
+
   .section-aboutus__card {
     min-height: 184px;
     border: none;
     padding: 0;
     justify-content: space-between;
   }
+
   .section-aboutus__card:not(:last-child) {
     margin-bottom: 22px;
   }
+
   .section-aboutus__card__img {
     margin: 9px 0 15px 0;
   }
+
   .section-aboutus__card__content {
     max-width: 100%;
     margin: 0;
   }
+
   .section-aboutus__cardtitle {
     margin: 0;
   }
+
   .section-howwework {
     margin-top: 61px;
   }
+
   .section-howwework__list {
     margin-top: 17px;
   }
+
   .section-howwework__step__btn {
     font-size: 13px;
   }
+
   .section-howwework__step:not(:last-child) {
     margin-right: 3px;
   }
+
   .section-howwework__adaptive {
     width: 291px;
     margin-top: 14px;
     min-height: 160px;
   }
+
   .section-howwework__opisanie {
     margin-top: 19px;
   }
+
   .section-howwework__title-step {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.2px;
   }
+
   .section-howwework__description-step {
     line-height: 28px;
     font-size: 14px;
     margin-top: 15px;
   }
+
   .section-howwework__opisanie__buttons {
     margin-top: 13px;
   }
+
   .moredetails-btn {
     padding: 11px 46px;
     font-size: 11px;
     margin-right: 10px;
   }
+
   .contract-btn {
     padding: 11px 32px;
     font-size: 12px;
   }
+
   .section-questions {
     margin-top: 62px;
     line-height: 28px;
   }
-  .section-questions__list {
+
+  .accordion {
     margin-top: 15px;
   }
+
   .section-questions__item {
-    padding: 16px 0;
+    padding: 32px 0;
   }
+
   .question {
     font-size: 14px;
     font-weight: 600;
-    max-width: 249px;
+    line-height: 22px;
+    width: 238px;
+  }
+
+  .ui-accordion-header {
+    font-size: 14px;
+    font-weight: 600;
     line-height: 24px;
     letter-spacing: -0.1px;
   }
+
   .question__link svg {
     width: 30px;
     height: 30px;
   }
+
+  .section-questions__answer__paragraf {
+    font-size: 12px;
+    line-height: 25px;
+  }
+
   .footer {
     margin-top: 58px;
   }
+
   .footer__container {
     justify-content: center;
   }
+
   .footer__left {
     min-width: 291px;
   }
+
   .footer__left__info {
     display: flex;
     flex-direction: column;
@@ -1551,63 +2023,78 @@ html {
     margin-top: 22px;
     border-top: 1px solid var(--color-grey);
   }
+
   .footer__logo {
     margin-top: 8px;
     width: 132px;
     height: auto;
   }
+
   .footer__social {
     margin-top: 2px;
     margin-left: 0px;
   }
+
   .footer__social__item {
     width: 40px;
     height: 40px;
   }
+
   .footer__social__item:not(:last-child) {
     margin-right: 16px;
   }
+
   .footer__social__icon {
     display: flex;
     width: 40px;
     height: 40px;
   }
+
   .footer__form__btn {
     display: flex;
     margin-top: 0;
     flex-direction: column;
   }
+
   .submit-btn {
     padding: 11px 27px;
     font-size: 12px;
   }
+
   .footer__checkbox {
     margin-top: 19px;
   }
+
   .footer__checkbox__old+.footer__checkbox__new {
     margin-left: 4px;
   }
+
   .footer__checkbox-text {
     margin-left: 5px;
   }
 }
 
 @media (max-width: 320px) {
-  .section-solution__container {
+  /* .section-solution__container {
     background-image: url(../img/hero320.jpg);
-  }
+  } */
+
   .section-aboutus__moredetails {
     max-width: 292px;
   }
+
   .section-aboutus__card__content {
     max-width: 292px;
   }
+
   .footer__form {
     margin-top: 11px;
   }
+
   .footer__form__btn {
     align-items: baseline;
   }
+
   .submit-btn {
     padding: 11px 27px;
     font-size: 12px;
