@@ -34,12 +34,15 @@
                     </div>
                     <ul class="menu-nav__list" id="menu">
                         <li class="menu-nav__item">
-                            <a href="#" class="burger-menu__close__link" id="close-burger">
-                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333" />
-              <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333" />
-            </svg>
-                            </a>
+                            <button aria-label="Закрыть меню" class="burger-menu__close__link" id="close-burger">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)"
+                                        fill="#333333" />
+                                    <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)"
+                                        fill="#333333" />
+                                </svg>
+                            </button>
                         </li>
                         <li class="menu-nav__item">
                             <a href="#" class="menu-nav__link">О нас</a>
@@ -58,37 +61,40 @@
                         </li>
                     </ul>
                     <div class="header__search">
-                        <a href="#" class="menu-nav__search" id="search">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816
+                        <button aria-label="Найти" class="menu-nav__search" id="search">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816
             18.6062 17.3762)" fill="#333333" />
-            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452
+                                <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452
             10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1
             5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198
             20.9303 10.7726Z" stroke="#333333" stroke-width="2" />
-          </svg>
-                        </a>
+                            </svg>
+                        </button>
                         <form action="" class="form-search" id="form-search">
                             <input type="text" class="input-search" placeholder="Что будем искать?">
-                            <a href="#" class="menu-nav__form-search">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816
+                            <button type="submit" aria-label="Искать" class="menu-nav__form-search nav-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816
                 18.6062 17.3762)" fill="#333333" />
-              <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452
+                                    <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452
                 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1
                 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198
                 20.9303 10.7726Z" stroke="#333333" stroke-width="2" />
-            </svg>
-                            </a>
-                            <a href="#" class="menu-nav__form-close" id="form-close">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)"
-                fill="#999999" />
-              <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30432 15.5524)"
-                fill="#999999" />
-              <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2" />
-            </svg>
-                            </a>
+                                </svg>
+                            </button>
+                            <button aria-label="Закрыть поиск" class="menu-nav__form-close nav-btn" id="form-close">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291"
+                                        transform="rotate(45 8.95386 7.30435)" fill="#999999" />
+                                    <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291"
+                                        transform="rotate(-45 7.30432 15.5524)" fill="#999999" />
+                                    <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2" />
+                                </svg>
+                            </button>
                         </form>
                     </div>
                 </nav>
@@ -118,8 +124,8 @@
                     <h3 class="section-solution__title">Проектные решения любой сложности</h3>
                     <p class="section-solution__description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
                     <button class="section-solution__btn btn">
-        Заказать расчет
-      </button>
+                        Заказать расчет
+                    </button>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -145,8 +151,8 @@
                                     Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.
                                 </div>
                                 <button class="btn section-aboutus__moredetails__btn">
-              Подробнее
-            </button>
+                                    Подробнее
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -186,7 +192,7 @@
                 <ul class="section-howwework__list">
                     <li class="section-howwework__step">
                         <button class="section-howwework__step__btn link section-howwework__step__btn--active" data-path="one">1
-          шаг</button>
+                            шаг</button>
                     </li>
                     <li class="section-howwework__step">
                         <button class="section-howwework__step__btn link" data-path="two">2 шаг</button>
@@ -211,11 +217,11 @@
                         </div>
                         <div class="section-howwework__opisanie__buttons">
                             <button class="btn section-howwework__opisanie__btn moredetails-btn">
-            Подробнее
-          </button>
+                                Подробнее
+                            </button>
                             <button class="btn section-howwework__opisanie__btn contract-btn">
-            Договор
-          </button>
+                                Договор
+                            </button>
                         </div>
                     </div>
                     <div class="section-howwework__adaptive">
@@ -239,11 +245,11 @@
                         </div>
                         <div class="section-howwework__opisanie__buttons">
                             <button class="btn section-howwework__opisanie__btn moredetails-btn">
-            Подробнее
-          </button>
+                                Подробнее
+                            </button>
                             <button class="btn section-howwework__opisanie__btn contract-btn">
-            Договор
-          </button>
+                                Договор
+                            </button>
                         </div>
                     </div>
                     <div class="section-howwework__adaptive">
@@ -267,11 +273,11 @@
                         </div>
                         <div class="section-howwework__opisanie__buttons">
                             <button class="btn section-howwework__opisanie__btn moredetails-btn">
-            Подробнее
-          </button>
+                                Подробнее
+                            </button>
                             <button class="btn section-howwework__opisanie__btn contract-btn">
-            Договор
-          </button>
+                                Договор
+                            </button>
                         </div>
                     </div>
                     <div class="section-howwework__adaptive">
@@ -295,11 +301,11 @@
                         </div>
                         <div class="section-howwework__opisanie__buttons">
                             <button class="btn section-howwework__opisanie__btn moredetails-btn">
-            Подробнее
-          </button>
+                                Подробнее
+                            </button>
                             <button class="btn section-howwework__opisanie__btn contract-btn">
-            Договор
-          </button>
+                                Договор
+                            </button>
                         </div>
                     </div>
                     <div class="section-howwework__adaptive">
@@ -323,14 +329,15 @@
                             <h3 class="question">
                                 Из чего формируется конечная стоимость проекта?
                             </h3>
-                            <a href="#" class="question__link">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
+                            <button href="#" class="question__button">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
               24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571
               24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666" />
-            </svg>
-                            </a>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="section-questions__answer">
@@ -350,14 +357,15 @@
                             <h3 class="question">
                                 У меня есть свой проект. Сможем ли мы его доработать / реализовать?
                             </h3>
-                            <a href="#" class="question__link">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
+                            <button href="#" class="question__button">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
               24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571
               24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666" />
-            </svg>
-                            </a>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="section-questions__answer">
@@ -377,14 +385,15 @@
                             <h3 class="question">
                                 Я выбираю между разными компаниями. В чём ваше отличие?
                             </h3>
-                            <a href="#" class="question__link">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
+                            <button href="#" class="question__button">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
               24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571
               24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666" />
-            </svg>
-                            </a>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="section-questions__answer">
@@ -404,14 +413,15 @@
                             <h3 class="question">
                                 Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
                             </h3>
-                            <a href="#" class="question__link">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
+                            <button href="#" class="question__button">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
               24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571
               24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666" />
-            </svg>
-                            </a>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="section-questions__answer">
@@ -431,14 +441,15 @@
                             <h3 class="question">
                                 Могу ли я вернуть деньги на каком-либо из этапов работ?
                             </h3>
-                            <a href="#" class="question__link">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
+                            <button href="#" class="question__button">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429
               24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571
               24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666" />
-            </svg>
-                            </a>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="section-questions__answer">
@@ -468,46 +479,47 @@
                     <ul class="footer__list">
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            О нас
-          </a>
+                                О нас
+                            </a>
                         </li>
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            Проекты
-          </a>
+                                Проекты
+                            </a>
                         </li>
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            Отзывы
-          </a>
+                                Отзывы
+                            </a>
                         </li>
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            Договор оферты
-          </a>
+                                Договор оферты
+                            </a>
                         </li>
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            Договор подряда
-          </a>
+                                Договор подряда
+                            </a>
                         </li>
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            Конфиденциальность
-          </a>
+                                Конфиденциальность
+                            </a>
                         </li>
                         <li class="footer_item">
                             <a href="#" class="footer__item__link link">
-            Партнерское соглашение
-          </a>
+                                Партнерское соглашение
+                            </a>
                         </li>
                     </ul>
                     <div class="footer__social">
                         <ul class="footer__social__list">
                             <li class="footer__social__item">
-                                <a href="#" class="footer__social__icon facebook">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 0C13.5 0 0 13.5241 0 30.1807C0
+                                <button aria-label="Facebook" class="footer__social__icon facebook">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 0C13.5 0 0 13.5241 0 30.1807C0
                 45.241 10.98 57.741 25.32
                 60V38.9157H17.7V30.1807H25.32V23.5241C25.32 15.9639
                 29.79 11.8072 36.66 11.8072C39.93 11.8072 43.3499
@@ -516,13 +528,14 @@
                 38.9157H34.68V60C41.7493 58.8791 48.1866 55.2576 52.8297
                 49.7893C57.4729 44.3211 60.016 37.3664 59.9999
                 30.1807C59.9999 13.5241 46.4999 0 30 0Z" fill="#7C7C7C" />
-              </svg>
-                                </a>
+                                    </svg>
+                                </button>
                             </li>
                             <li class="footer__social__item">
-                                <a href="#" class="footer__social__icon vk">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568
+                                <button aria-label=" В контакте" class="footer__social__icon vk">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568
                 60 60 46.5686 60 30C60 13.4314 46.568 0 30 0ZM45.2176 33.2446C46.6159 34.6103
                 48.0951 35.8957 49.3504 37.4026C49.9065 38.0692 50.4307 38.7585 50.8297 39.5337C51.3993
                 40.6392 50.8849 41.8515 49.8954 41.9171L43.7494 41.9159C42.162 42.0473 40.8988
@@ -544,16 +557,17 @@
                 18.8747 49.6812 18.8765 49.8764 18.9103C51.0034 19.103 51.3121 19.5879 50.9635 20.6873C50.4147
                 22.4145 49.3485 23.8533 48.3063 25.2958C47.1892 26.8401 45.9977 28.3304 44.8917 29.8815C43.8752
                 31.2994 43.9556 32.0133 45.2176 33.2446Z" fill="#7C7C7C" />
-              </svg>
-                                </a>
+                                    </svg>
+                                </button>
                             </li>
                             <li class="footer__social__item">
-                                <a href="#" class="footer__social__icon instagram">
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24.2578 30C24.2578 33.1714 26.8286 35.7422 30 35.7422C33.1714 35.7422 35.7422 33.1714
+                                <button aria-label="Instagram" class="footer__social__icon instagram">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.2578 30C24.2578 33.1714 26.8286 35.7422 30 35.7422C33.1714 35.7422 35.7422 33.1714
                 35.7422 30C35.7422 26.8286 33.1714 24.2578 30 24.2578C26.8286 24.2578 24.2578 26.8286 24.2578 30Z"
-                  fill="#7C7C7C" />
-                <path d="M16.571 19.8403C16.8471 19.0923 17.2874 18.4153 17.8596 17.8596C18.4154 17.2874
+                                            fill="#7C7C7C" />
+                                        <path d="M16.571 19.8403C16.8471 19.0923 17.2874 18.4153 17.8596 17.8596C18.4154 17.2874
                 19.0919 16.847 19.8404 16.571C20.4474 16.3352 21.3593 16.0546 23.0388 15.9781C24.8557 15.8953
                 25.4004 15.8774 30 15.8774C34.6001 15.8774 35.1448 15.8948 36.9612 15.9777C38.6407 16.0546
                 39.5531 16.3352 40.1596 16.571C40.9081 16.847 41.5851 17.2874 42.1404 17.8596C42.7126 18.4153
@@ -570,7 +584,7 @@
                 38.8457ZM20.8044 22.8716C21.9461 22.8716 22.8717 21.946 22.8717 20.8044C22.8717 19.6627 21.9461
                 18.7371 20.8044 18.7371C19.6628 18.7371 18.7372 19.6627 18.7372 20.8044C18.7376 21.946 19.6628
                 22.8716 20.8044 22.8716Z" fill="#7C7C7C" />
-                <path d="M30 0C46.566 0 60 13.434 60 30C60 46.566 46.566 60 30 60C13.434 60 0 46.566 0 30C0
+                                        <path d="M30 0C46.566 0 60 13.434 60 30C60 46.566 46.566 60 30 60C13.434 60 0 46.566 0 30C0
                 13.434 13.434 0 30 0ZM12.8773 37.1022C12.9607 38.936 13.2523 40.188 13.678 41.2839C14.5729
                 43.5979 16.4021 45.4271 18.7161 46.322C19.8116 46.7477 21.064 47.0389 22.8973 47.1227C24.7343
                 47.2064 25.3212 47.2266 29.9995 47.2266C34.6783 47.2266 35.2647 47.2064 37.1022 47.1227C38.9355
@@ -582,10 +596,9 @@
                 12.7936 34.6783 12.7734 30 12.7734C25.3217 12.7734 24.7348 12.7936 22.8978 12.8778C21.064
                 12.9611 19.812 13.2523 18.7161 13.6775C17.5667 14.1101 16.5253 14.7885 15.6647 15.6651C14.7885
                 16.5257 14.1101 17.5667 13.678 18.7161C13.2518 19.812 12.9607 21.064 12.8769 22.8978C12.7931
-                24.7348 12.7734 25.3217 12.7734 30C12.7734 34.6783 12.7931 35.2652 12.8773 37.1022Z"
-                  fill="#7C7C7C" />
-              </svg>
-                                </a>
+                24.7348 12.7734 25.3217 12.7734 30C12.7734 34.6783 12.7931 35.2652 12.8773 37.1022Z" fill="#7C7C7C" />
+                                    </svg>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -598,13 +611,13 @@
                         <textarea name="massage" placeholder="Сообщение" class="input footer__form__massage"></textarea>
                         <div class="footer__form__btn">
                             <button type="submit" class="btn submit-btn">
-            Отправить данные
-          </button>
+                                Отправить данные
+                            </button>
                             <label for="checkbox" class="footer__checkbox">
-            <input type="checkbox" name="Soglasie" class="footer__checkbox__old" id="checkbox">
-            <span class="footer__checkbox__new"></span>
-            <span class="footer__checkbox-text">Согласен на обработку данных</span>
-          </label>
+                                <input type="checkbox" name="Soglasie" class="footer__checkbox__old" id="checkbox">
+                                <span class="footer__checkbox__new"></span>
+                                <span class="footer__checkbox-text">Согласен на обработку данных</span>
+                            </label>
                         </div>
                     </form>
                 </div>
