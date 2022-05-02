@@ -1,687 +1,775 @@
-                                                        @font-face {
-                                                            font-family: 'Roboto';
-                                                            src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/roboto-regular-webfont.woff') format('woff');
-                                                            font-weight: 400;
-                                                            font-display: swap;
-                                                            font-style: normal;
-                                                        }
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 
-                                                        @font-face {
-                                                            font-family: 'Roboto';
-                                                            src: url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff');
-                                                            font-weight: 700;
-                                                            font-display: swap;
-                                                            font-style: normal;
-                                                        }
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 
-                                                        html {
-                                                            font-family: 'Roboto', sans-serif;
-                                                        }
+html {
+  font-family: 'Roboto', sans-serif;
+}
 
-                                                        * {
-                                                            box-sizing: border-box;
-                                                            margin: 0;
-                                                            padding: 0;
-                                                        }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-                                                        img {
-                                                            max-width: 100%;
-                                                        }
+img {
+  max-width: 100%;
+}
 
-                                                        a {
-                                                            text-decoration: none;
-                                                            color: var(--bs-white);
-                                                            font-size: 17px;
-                                                            font-weight: 700;
-                                                        }
+a {
+  text-decoration: none;
+  color: var(--bs-white);
+  font-size: 17px;
+  font-weight: 700;
+}
 
-                                                        ul {
-                                                            display: flex;
-                                                            flex-wrap: wrap;
-                                                            margin: 0;
-                                                            padding: 0;
-                                                            list-style: none;
-                                                        }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-                                                        .btn {
-                                                            background-color: #3F2AFF;
-                                                            padding: 24px 77px;
-                                                            border: 1px solid #3F2AFF;
-                                                            border-radius: 20px;
-                                                            max-width: 270px;
-                                                            font-size: 18px;
-                                                            font-weight: 700;
-                                                        }
+.btn {
+  background-color: #3F2AFF;
+  padding: 24px 77px;
+  border: 1px solid #3F2AFF;
+  border-radius: 20px;
+  max-width: 270px;
+  font-size: 18px;
+  font-weight: 700;
+}
 
-                                                        .container {
-                                                            max-width: 1110px;
-                                                            padding: 0;
-                                                        }
+.container {
+  max-width: 1110px;
+  padding: 0;
+}
 
-                                                        .header {
-                                                            max-width: 1440px;
-                                                            margin-right: auto;
-                                                            margin-left: auto;
-                                                            background-color: #3F2AFF;
-                                                            max-height: 80px;
-                                                        }
+.header {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #3F2AFF;
+  max-height: 80px;
+}
 
-                                                        .header__container {
-                                                            display: flex;
-                                                            min-height: 80px;
-                                                            align-items: center;
-                                                            justify-content: space-between;
-                                                        }
+.header__container {
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
 
-                                                        .burger {
-                                                            display: none;
-                                                        }
+.burger {
+  display: none;
+}
 
-                                                        .menu-nav__list {
-                                                            display: flex;
-                                                            margin-top: -4.4px;
-                                                        }
+.menu-nav__list {
+  display: flex;
+  margin-top: -4.4px;
+}
 
-                                                        .close-menu {
-                                                            display: none;
-                                                        }
+.close-menu {
+  display: none;
+}
 
-                                                        .menu-nav__item:not(:last-child) {
-                                                            margin-right: 56px;
-                                                        }
+.menu-nav__item:not(:last-child) {
+  margin-right: 56px;
+}
 
-                                                        .menu-nav__link {
-                                                            font-size: 18px;
-                                                        }
+.menu-nav__link {
+  font-size: 18px;
+}
 
-                                                        .section {
-                                                            padding-top: 80px;
-                                                            padding-bottom: 77px;
-                                                        }
+.section {
+  padding-top: 80px;
+  padding-bottom: 77px;
+}
 
-                                                        .section__hero {
-                                                            position: relative;
-                                                            display: flex;
-                                                            align-items: center;
-                                                            min-height: 620px;
-                                                            background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
-                                                            max-width: 1440px;
-                                                            margin: auto;
-                                                            padding: 0;
-                                                        }
+.section__hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 620px;
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  max-width: 1440px;
+  margin: auto;
+  padding: 0;
+}
 
-                                                        .hero__text-content {
-                                                            margin: 0;
-                                                            margin-bottom: 63px;
-                                                            color: var(--bs-white);
-                                                            line-height: 27px;
-                                                            font-size: 18px;
-                                                        }
+.hero__text-content {
+  margin: 0;
+  margin-bottom: 63px;
+  color: var(--bs-white);
+  line-height: 27px;
+  font-size: 18px;
+}
 
-                                                        .hero__title {
-                                                            margin-top: 115px;
-                                                            color: var(--bs-white);
-                                                            font-size: 60px;
-                                                            line-height: 62px;
-                                                        }
+.hero__title {
+  margin-top: 115px;
+  color: var(--bs-white);
+  font-size: 60px;
+  line-height: 62px;
+}
 
-                                                        .hero__text {
-                                                            margin-top: 25px;
-                                                            max-width: 450px;
-                                                        }
+.hero__text {
+  margin-top: 25px;
+  max-width: 450px;
+}
 
-                                                        .hero__btn {
-                                                            margin-top: 64px;
-                                                        }
+.hero__btn {
+  margin-top: 64px;
+}
 
-                                                        .benefits {
-                                                            display: flex;
-                                                            align-items: center;
-                                                        }
+.benefits {
+  display: flex;
+  align-items: center;
+}
 
-                                                        .benefits__content {
-                                                            margin-left: 30px;
-                                                        }
+.benefits__content {
+  margin-left: 30px;
+}
 
-                                                        .benefits__title {
-                                                            max-width: 366px;
-                                                            margin: 0;
-                                                            font-size: 40px;
-                                                            line-height: 40px;
-                                                        }
+.benefits__title {
+  max-width: 366px;
+  margin: 0;
+  font-size: 40px;
+  line-height: 40px;
+}
 
-                                                        .benefits__text {
-                                                            margin: 0;
-                                                            margin-top: 18px;
-                                                            line-height: 24px;
-                                                            max-width: 576px;
-                                                        }
+.benefits__text {
+  margin: 0;
+  margin-top: 18px;
+  line-height: 24px;
+  max-width: 576px;
+}
 
-                                                        .about__cards,
-                                                        .about__card {
-                                                            display: flex;
-                                                            align-items: center;
-                                                            margin-top: 11px;
-                                                        }
+.about__cards,
+.about__card {
+  display: flex;
+  align-items: center;
+  margin-top: 11px;
+}
 
-                                                        .about__card-text {
-                                                            font-size: 16px;
-                                                            line-height: 19px;
-                                                            margin-left: 31px;
-                                                            font-weight: 700;
-                                                            max-width: 240px;
-                                                        }
+.about__card-text {
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 31px;
+  font-weight: 700;
+  max-width: 240px;
+}
 
-                                                        .section__teachers {
-                                                            max-width: 1440px;
-                                                            min-height: 577px;
-                                                            margin: auto;
-                                                            padding: 71px 0;
-                                                            background-color: #2E2B44;
-                                                        }
+.section__teachers {
+  max-width: 1440px;
+  min-height: 577px;
+  margin: auto;
+  padding: 71px 0;
+  background-color: #2E2B44;
+}
 
-                                                        .teachers__container {
-                                                            padding: 0;
-                                                        }
+.teachers__container {
+  padding: 0;
+}
 
-                                                        .title {
-                                                            margin: 0;
-                                                            font-size: 40px;
-                                                            color: #fff;
-                                                        }
+.title {
+  margin: 0;
+  font-size: 40px;
+  color: #fff;
+}
 
-                                                        .teachers__cardlist {
-                                                            margin-top: 21px;
-                                                        }
+.teachers__cardlist {
+  margin-top: 21px;
+}
 
-                                                        .teachers__item {
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            align-items: center;
-                                                        }
+.teachers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-                                                        .teachers__foto-img-origin {
-                                                            border-top-left-radius: 23px;
-                                                            border-top-right-radius: 23px;
-                                                            margin-top: 2px;
-                                                        }
+.teachers__foto-img-origin {
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+  margin-top: 2px;
+}
 
-                                                        .teachers__content {
-                                                            margin-top: 30px;
-                                                            max-width: 254px;
-                                                        }
+.teachers__content {
+  margin-top: 30px;
+  max-width: 254px;
+}
 
-                                                        .teachers__name {
-                                                            color: #fff;
-                                                            font-size: 18px;
-                                                            font-weight: 700;
-                                                        }
+.teachers__name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
 
-                                                        .teachers__description {
-                                                            color: #fff;
-                                                            margin: 0;
-                                                            /* max-width: 250px; */
-                                                            margin-top: 10px;
-                                                            line-height: 24px;
-                                                            color: #85859B;
-                                                        }
+.teachers__description {
+  color: #fff;
+  margin: 0;
+  /* max-width: 250px; */
+  margin-top: 10px;
+  line-height: 24px;
+  color: #85859B;
+}
 
-                                                        .section__courses {
-                                                            padding-top: 70px;
-                                                            padding-bottom: 51px;
-                                                        }
+.section__courses {
+  padding-top: 70px;
+  padding-bottom: 51px;
+}
 
-                                                        .courses__container {
-                                                            /* padding: 0;
+.courses__container {
+  /* padding: 0;
                                                 padding-top: 70px; */
-                                                        }
+}
 
-                                                        .courses__title {
-                                                            color: black;
-                                                            margin-bottom: 20px;
-                                                        }
+.courses__title {
+  color: black;
+  margin-bottom: 20px;
+}
 
-                                                        .courses__cardlist {
-                                                            justify-content: space-between;
-                                                        }
+.courses__cardlist {
+  justify-content: space-between;
+}
 
-                                                        .courses__card {
-                                                            margin-bottom: 30px;
-                                                        }
+.courses__card {
+  margin-bottom: 30px;
+}
 
-                                                        .courses__item {
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            align-items: center;
-                                                        }
+.courses__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-                                                        .courses__img {
-                                                            max-height: 180px;
-                                                            position: relative;
-                                                        }
+.courses__img {
+  max-height: 180px;
+  position: relative;
+}
 
-                                                        .course__picture {
-                                                            border-top-right-radius: 18px;
-                                                            border-top-left-radius: 18px;
-                                                        }
+.course__picture {
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+}
 
-                                                        .courses__clock {
-                                                            display: flex;
-                                                            align-items: center;
-                                                            position: absolute;
-                                                            top: 11px;
-                                                            right: 7px;
-                                                        }
+.courses__clock {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 11px;
+  right: 7px;
+}
 
-                                                        .courses__time {
-                                                            color: white;
-                                                            margin-left: 4px;
-                                                        }
+.courses__time {
+  color: white;
+  margin-left: 4px;
+}
 
-                                                        .courses__card-content {
-                                                            display: flex;
-                                                            max-width: 539px;
-                                                            flex-direction: column;
-                                                            align-items: flex-start;
-                                                            padding: 35px 35px 0 32px;
-                                                            background-color: aliceblue;
-                                                            min-height: 300px;
-                                                            border-bottom-right-radius: 15px;
-                                                            border-bottom-left-radius: 15px;
-                                                        }
+.courses__card-content {
+  display: flex;
+  max-width: 539px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 35px 0 32px;
+  background-color: aliceblue;
+  min-height: 300px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
 
-                                                        .courses__card-title {
-                                                            font-size: 18px;
-                                                            margin-bottom: 11px;
-                                                        }
+.courses__card-title {
+  font-size: 18px;
+  margin-bottom: 11px;
+}
 
-                                                        .courses__card-text {
-                                                            margin-bottom: auto;
-                                                            line-height: 23px;
-                                                            color: #666666;
-                                                        }
+.courses__card-text {
+  margin-bottom: auto;
+  line-height: 23px;
+  color: #666666;
+}
 
-                                                        .courses__btn {
-                                                            margin-bottom: 29px;
-                                                            padding: 19px 60px;
-                                                        }
+.courses__btn {
+  margin-bottom: 29px;
+  padding: 19px 60px;
+}
 
-                                                        .courses__btn__link {
-                                                            font-size: 15px;
-                                                        }
+.courses__btn__link {
+  font-size: 15px;
+}
 
-                                                        .footer {
-                                                            /* margin-top: 53px; */
-                                                            /* min-height: 100px; */
-                                                        }
+.footer {
+  /* margin-top: 53px; */
+  /* min-height: 100px; */
+}
 
-                                                        .footer__container {
-                                                            max-width: 1440px;
-                                                            padding: 0;
-                                                            margin: auto;
-                                                        }
+.footer__container {
+  max-width: 1440px;
+  padding: 0;
+  margin: auto;
+}
 
-                                                        .footer__social {
-                                                            display: flex;
-                                                            background-color: #2E2B44;
-                                                            min-height: 80px;
-                                                            justify-content: center;
-                                                            align-items: center;
-                                                        }
+.footer__social {
+  display: flex;
+  background-color: #2E2B44;
+  min-height: 80px;
+  justify-content: center;
+  align-items: center;
+}
 
-                                                        .footer__social__item:not(:last-child) {
-                                                            margin-right: 25px;
-                                                        }
+.footer__social__item:not(:last-child) {
+  margin-right: 25px;
+}
 
-                                                        .footer__social__icon {
-                                                            background-color: transparent;
-                                                            width: 30px;
-                                                            height: 30px;
-                                                            border: none;
-                                                        }
+.footer__social__icon {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
 
-                                                        .footer__year {
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            min-height: 18px;
-                                                        }
+.footer__year {
+  display: flex;
+  justify-content: center;
+  min-height: 18px;
+}
 
-                                                        .footer__year-text {
-                                                            margin-top: 4px;
-                                                            font-size: 13px;
-                                                        }
-                                                        /* стили */
-                                                        /* // Устройства Large (настольные компьютеры, менее 1200 пикселей) */
+.footer__year-text {
+  margin-top: 4px;
+  font-size: 13px;
+}
 
-                                                        @media (max-width: 1199.98px) {
-                                                            .container {
-                                                                max-width: 992px;
-                                                            }
-                                                            .hero__title {
-                                                                margin-top: 0;
-                                                            }
-                                                            .hero__img {
-                                                                display: flex;
-                                                                justify-content: center;
-                                                            }
-                                                            .courses__img {
-                                                                max-height: 161px;
-                                                            }
-                                                            .teachers__item {
-                                                                margin-bottom: 30px;
-                                                            }
-                                                            .teachers__content {
-                                                                max-width: 330px;
-                                                            }
-                                                        }
+/* стили */
+/* // Устройства Large (настольные компьютеры, менее 1200 пикселей) */
 
-                                                        @media (max-width: 1023.98px) {
-                                                            .container {
-                                                                max-width: 850px;
-                                                            }
-                                                            .hero__img {
-                                                                justify-content: flex-end;
-                                                            }
-                                                            .courses__img {
-                                                                max-height: 137px;
-                                                            }
-                                                        }
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 992px;
+  }
 
-                                                        @media (max-width: 879.98px) {
-                                                            .container {
-                                                                max-width: 690px;
-                                                            }
-                                                            .section__hero {
-                                                                background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #2E2B44 100%);
-                                                            }
-                                                            .hero__content {
-                                                                padding-top: 10px;
-                                                            }
-                                                            .hero__title {
-                                                                font-size: 50px;
-                                                                line-height: 50px;
-                                                            }
-                                                            .hero__text {
-                                                                margin-top: 19px;
-                                                            }
-                                                            .hero__btn {
-                                                                margin-top: -3px;
-                                                            }
-                                                            .hero__img-origin {
-                                                                margin-bottom: 30px;
-                                                            }
-                                                            .benefits__img {
-                                                                min-width: 211px;
-                                                            }
-                                                            .about__cards {
-                                                                margin-top: 15px;
-                                                                align-items: stretch;
-                                                            }
-                                                            .about__card {
-                                                                flex-direction: column;
-                                                                align-items: flex-start;
-                                                                margin-top: 6px;
-                                                            }
-                                                            .about__card-text {
-                                                                margin-left: 0;
-                                                                margin-top: 8px;
-                                                                max-width: 203px;
-                                                            }
-                                                            .teachers__foto-img-origin {
-                                                                margin-top: 0px;
-                                                            }
-                                                            .teachers__item {
-                                                                margin-bottom: 24px;
-                                                            }
-                                                            .section__teachers {
-                                                                padding-bottom: 27px;
-                                                            }
-                                                            .courses__card {
-                                                                margin-bottom: 31px;
-                                                            }
-                                                            .courses__img {
-                                                                max-height: 180px;
-                                                            }
-                                                            .courses__clock {
-                                                                right: 13px;
-                                                            }
-                                                            .courses__card-content {
-                                                                min-height: 375px;
-                                                                max-width: 331px;
-                                                            }
-                                                            .courses__card-text {
-                                                                line-height: 24px;
-                                                            }
-                                                            .courses__btn {
-                                                                padding: 19px 57px;
-                                                            }
-                                                        }
-                                                        /* // Устройства Medium (планшеты, менее 992 пикселей) */
+  .hero__title {
+    margin-top: 0;
+  }
 
-                                                        @media (max-width: 991.98px) {}
-                                                        /* // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей) */
+  .hero__img {
+    display: flex;
+    justify-content: center;
+  }
 
-                                                        @media (max-width: 767.98px) {
-                                                            .header {
-                                                                min-height: 132px;
-                                                            }
-                                                            .header__container {
-                                                                flex-direction: column;
-                                                            }
-                                                            .header__left {
-                                                                margin-top: 31px;
-                                                            }
-                                                            .header__right {
-                                                                margin-top: 30px;
-                                                            }
-                                                            .container {
-                                                                max-width: 510px;
-                                                            }
-                                                            .section__hero {
-                                                                min-height: 569px;
-                                                                background: radial-gradient(49% 49% at 67.78% 84.57%, #555681 0%, #2E2B44 100%);
-                                                            }
-                                                            .hero__content {
-                                                                margin-top: -64px;
-                                                            }
-                                                            .hero__text-content {
-                                                                max-width: 322px;
-                                                            }
-                                                            .hero__img-origin {
-                                                                display: none;
-                                                            }
-                                                            .section__about {
-                                                                padding-bottom: 56px;
-                                                            }
-                                                            .benefits {
-                                                                align-items: flex-start;
-                                                            }
-                                                            .benefits__img {
-                                                                min-width: 150px;
-                                                            }
-                                                            .section__teachers {
-                                                                padding-bottom: 50px;
-                                                            }
-                                                            .section__courses {
-                                                                padding-bottom: 49px;
-                                                            }
-                                                            .courses__card {
-                                                                margin-bottom: 30px;
-                                                            }
-                                                            .courses__card-content {
-                                                                min-height: 475px;
-                                                                max-width: 239px;
-                                                                padding: 34px 19px 0 32px;
-                                                            }
-                                                            .courses__btn {
-                                                                padding: 19px 49px;
-                                                            }
-                                                        }
+  .courses__img {
+    max-height: 161px;
+  }
 
-                                                        @media (max-width: 575.98px) {
-                                                            .header {
-                                                                min-height: 80px;
-                                                            }
-                                                            .header__left,
-                                                            .header__right {
-                                                                margin: 0;
-                                                            }
-                                                            .header__container {
-                                                                flex-direction: row;
-                                                            }
-                                                            .menu-nav__list {
-                                                                display: flex;
-                                                                position: absolute;
-                                                                top: 0;
-                                                                left: 0;
-                                                                min-height: 436px;
-                                                                width: -webkit-fill-available;
-                                                                padding: 28px 60px;
-                                                                background-color: #2F2C45;
-                                                                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-                                                                transform: translateX(101%);
-                                                                transition: transform .3s ease-in-out;
-                                                                z-index: 12;
-                                                                flex-direction: column;
-                                                                align-items: stretch;
-                                                            }
-                                                            .burger {
-                                                                display: block;
-                                                            }
-                                                            .menu-nav__list.burger__is-active {
-                                                                transform: none;
-                                                            }
-                                                            .close-menu {
-                                                                display: block;
-                                                                margin-left: auto;
-                                                            }
-                                                            .menu-nav__item:not(:last-child) {
-                                                                margin-bottom: 56px;
-                                                                margin-right: 0;
-                                                            }
-                                                            .menu-nav__item.close-menu {
-                                                                margin-bottom: 20px;
-                                                            }
-                                                            .section__hero {
-                                                                min-height: 352px;
-                                                                align-items: stretch;
-                                                            }
-                                                            .container {
-                                                                max-width: 420px;
-                                                            }
-                                                            .hero__row {
-                                                                padding-top: 38px;
-                                                            }
-                                                            .hero__content {
-                                                                margin-top: 0;
-                                                            }
-                                                            .hero__title {
-                                                                font-size: 30px;
-                                                                line-height: 30px;
-                                                            }
-                                                            .hero__text {
-                                                                margin: 0;
-                                                                max-width: 300px;
-                                                            }
-                                                            .hero__text-content {
-                                                                font-size: 16px;
-                                                                margin-top: 6px;
-                                                                line-height: 20.8px;
-                                                                margin-bottom: 47px;
-                                                            }
-                                                            .btn {
-                                                                padding: 18px 50px;
-                                                            }
-                                                            .section__about {
-                                                                padding-top: 44px;
-                                                                padding-bottom: 56px;
-                                                            }
-                                                            .benefits__title {
-                                                                font-size: 20px;
-                                                            }
-                                                            .benefits__img {
-                                                                display: none;
-                                                            }
-                                                            .benefits__content {
-                                                                margin-left: 0px;
-                                                            }
-                                                            .about__card {
-                                                                flex-direction: row;
-                                                            }
-                                                            .about__card-text {
-                                                                margin-left: 31px;
-                                                            }
-                                                            .title {
-                                                                margin: 0;
-                                                                font-size: 20px;
-                                                            }
-                                                            .section__teachers {
-                                                                padding-top: 46px;
-                                                                padding-bottom: 25px;
-                                                            }
-                                                            .teachers__cardlist {
-                                                                margin-top: 24px;
-                                                            }
-                                                            .teachers__content {
-                                                                max-width: 290px;
-                                                            }
-                                                            .section__courses {
-                                                                padding-top: 45px;
-                                                            }
-                                                            .courses__cardlist {
-                                                                margin-top: 25px;
-                                                            }
-                                                            .courses__card-content {
-                                                                max-width: 290px;
-                                                            }
-                                                        }
+  .teachers__item {
+    margin-bottom: 30px;
+  }
 
-                                                        @media (max-width:444.98px) {
-                                                            .container {
-                                                                max-width: 290px;
-                                                            }
-                                                            .header-menu {
-                                                                margin-right: 3px;
-                                                            }
-                                                            .section__about {
-                                                                padding-top: 51px;
-                                                                padding-bottom: 30px;
-                                                            }
-                                                            .benefits__title {
-                                                                line-height: 26px;
-                                                            }
-                                                            .benefits__text {
-                                                                margin-top: 1px;
-                                                            }
-                                                            .about__cards {
-                                                                margin-top: 17px;
-                                                            }
-                                                            .about__card {
-                                                                margin-bottom: 19px;
-                                                            }
-                                                            .about__card-text {
-                                                                margin-top: 3px;
-                                                            }
-                                                            .section__teachers {
-                                                                padding-bottom: 28px;
-                                                            }
-                                                            .section__courses {
-                                                                padding-bottom: 20px;
-                                                            }
-                                                            .courses__clock {
-                                                                right: 11px;
-                                                            }
-                                                            .courses__card-content {
-                                                                padding: 31px 28px 0 30px;
-                                                                min-height: 473px;
-                                                            }
-                                                            .courses__card-title {
-                                                                line-height: 22.4px;
-                                                            }
-                                                            .courses__btn {
-                                                                padding: 19px 58px;
-                                                            }
-                                                            .courses__card-title {
-                                                                max-width: 188px;
-                                                            }
-                                                        }
+  .teachers__content {
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .container {
+    max-width: 850px;
+  }
+
+  .hero__img {
+    justify-content: flex-end;
+  }
+
+  .courses__img {
+    max-height: 137px;
+  }
+}
+
+@media (max-width: 879.98px) {
+  .container {
+    max-width: 690px;
+  }
+
+  .section__hero {
+    background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #2E2B44 100%);
+  }
+
+  .hero__content {
+    padding-top: 10px;
+  }
+
+  .hero__title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .hero__text {
+    margin-top: 19px;
+  }
+
+  .hero__btn {
+    margin-top: -3px;
+  }
+
+  .hero__img-origin {
+    margin-bottom: 30px;
+  }
+
+  .benefits__img {
+    min-width: 211px;
+  }
+
+  .about__cards {
+    margin-top: 15px;
+    align-items: stretch;
+  }
+
+  .about__card {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 6px;
+  }
+
+  .about__card-text {
+    margin-left: 0;
+    margin-top: 8px;
+    max-width: 203px;
+  }
+
+  .teachers__foto-img-origin {
+    margin-top: 0px;
+  }
+
+  .teachers__item {
+    margin-bottom: 24px;
+  }
+
+  .section__teachers {
+    padding-bottom: 27px;
+  }
+
+  .courses__card {
+    margin-bottom: 31px;
+  }
+
+  .courses__img {
+    max-height: 180px;
+  }
+
+  .courses__clock {
+    right: 13px;
+  }
+
+  .courses__card-content {
+    min-height: 375px;
+    max-width: 331px;
+  }
+
+  .courses__card-text {
+    line-height: 24px;
+  }
+
+  .courses__btn {
+    padding: 19px 57px;
+  }
+}
+
+/* // Устройства Medium (планшеты, менее 992 пикселей) */
+
+@media (max-width: 991.98px) {}
+
+/* // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей) */
+
+@media (max-width: 767.98px) {
+  .header {
+    min-height: 132px;
+  }
+
+  .header__container {
+    flex-direction: column;
+  }
+
+  .header__left {
+    margin-top: 31px;
+  }
+
+  .header__right {
+    margin-top: 30px;
+  }
+
+  .container {
+    max-width: 510px;
+  }
+
+  .section__hero {
+    min-height: 569px;
+    background: radial-gradient(49% 49% at 67.78% 84.57%, #555681 0%, #2E2B44 100%);
+  }
+
+  .hero__content {
+    margin-top: -64px;
+  }
+
+  .hero__text-content {
+    max-width: 322px;
+  }
+
+  .hero__img-origin {
+    display: none;
+  }
+
+  .section__about {
+    padding-bottom: 56px;
+  }
+
+  .benefits {
+    align-items: flex-start;
+  }
+
+  .benefits__img {
+    min-width: 150px;
+  }
+
+  .section__teachers {
+    padding-bottom: 50px;
+  }
+
+  .section__courses {
+    padding-bottom: 49px;
+  }
+
+  .courses__card {
+    margin-bottom: 30px;
+  }
+
+  .courses__card-content {
+    min-height: 475px;
+    max-width: 239px;
+    padding: 34px 19px 0 32px;
+  }
+
+  .courses__btn {
+    padding: 19px 49px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    min-height: 80px;
+  }
+
+  .header__left,
+  .header__right {
+    margin: 0;
+  }
+
+  .header__container {
+    flex-direction: row;
+  }
+
+  .menu-nav__list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 436px;
+    width: -webkit-fill-available;
+    padding: 28px 60px;
+    background-color: #2F2C45;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transform: translateX(101%);
+    transition: transform .3s ease-in-out;
+    z-index: 12;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .menu-nav__list.burger__is-active {
+    transform: none;
+  }
+
+  .close-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu-nav__item:not(:last-child) {
+    margin-bottom: 56px;
+    margin-right: 0;
+  }
+
+  .menu-nav__item.close-menu {
+    margin-bottom: 20px;
+  }
+
+  .section__hero {
+    min-height: 352px;
+    align-items: stretch;
+  }
+
+  .container {
+    max-width: 420px;
+  }
+
+  .hero__row {
+    padding-top: 38px;
+  }
+
+  .hero__content {
+    margin-top: 0;
+  }
+
+  .hero__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .hero__text {
+    margin: 0;
+    max-width: 300px;
+  }
+
+  .hero__text-content {
+    font-size: 16px;
+    margin-top: 6px;
+    line-height: 20.8px;
+    margin-bottom: 47px;
+  }
+
+  .btn {
+    padding: 18px 50px;
+  }
+
+  .section__about {
+    padding-top: 44px;
+    padding-bottom: 56px;
+  }
+
+  .benefits__title {
+    font-size: 20px;
+  }
+
+  .benefits__img {
+    display: none;
+  }
+
+  .benefits__content {
+    margin-left: 0px;
+  }
+
+  .about__card {
+    flex-direction: row;
+  }
+
+  .about__card-text {
+    margin-left: 31px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .section__teachers {
+    padding-top: 46px;
+    padding-bottom: 25px;
+  }
+
+  .teachers__cardlist {
+    margin-top: 24px;
+  }
+
+  .teachers__content {
+    max-width: 290px;
+  }
+
+  .section__courses {
+    padding-top: 45px;
+  }
+
+  .courses__cardlist {
+    margin-top: 25px;
+  }
+
+  .courses__card-content {
+    max-width: 290px;
+  }
+}
+
+@media (max-width:444.98px) {
+  .container {
+    max-width: 290px;
+  }
+
+  .header-menu {
+    margin-right: 3px;
+  }
+
+  .section__about {
+    padding-top: 51px;
+    padding-bottom: 30px;
+  }
+
+  .benefits__title {
+    line-height: 26px;
+  }
+
+  .benefits__text {
+    margin-top: 1px;
+  }
+
+  .about__cards {
+    margin-top: 17px;
+  }
+
+  .about__card {
+    margin-bottom: 19px;
+  }
+
+  .about__card-text {
+    margin-top: 3px;
+  }
+
+  .section__teachers {
+    padding-bottom: 28px;
+  }
+
+  .section__courses {
+    padding-bottom: 20px;
+  }
+
+  .courses__clock {
+    right: 11px;
+  }
+
+  .courses__card-content {
+    padding: 31px 28px 0 30px;
+    min-height: 473px;
+  }
+
+  .courses__card-title {
+    line-height: 22.4px;
+  }
+
+  .courses__btn {
+    padding: 19px 58px;
+  }
+
+  .courses__card-title {
+    max-width: 188px;
+  }
+}
