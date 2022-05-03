@@ -523,14 +523,15 @@ ul {
         left: 0;
         min-height: 436px;
         width: -webkit-fill-available;
-        padding: 28px 60px;
+        padding: 28px 0;
         background-color: #2F2C45;
         box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-        transform: translateX(101%);
+        transform: translateX(-101%);
         transition: transform .3s ease-in-out;
         z-index: 12;
         flex-direction: column;
         align-items: stretch;
+        align-content: center;
     }
     .burger {
         display: block;
@@ -542,12 +543,16 @@ ul {
         display: block;
         margin-left: auto;
     }
+    .menu-nav__item {
+        min-width: 420px;
+    }
     .menu-nav__item:not(:last-child) {
         margin-bottom: 56px;
         margin-right: 0;
     }
     .menu-nav__item.close-menu {
         margin-bottom: 20px;
+        padding-left: 394px;
     }
     .section__hero {
         min-height: 352px;
@@ -629,6 +634,12 @@ ul {
     }
     .header-menu {
         margin-right: 3px;
+    }
+    .menu-nav__item {
+        min-width: 290px;
+    }
+    .menu-nav__item.close-menu {
+        padding-left: 260px;
     }
     .section__about {
         padding-top: 51px;
